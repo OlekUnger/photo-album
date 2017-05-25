@@ -1,0 +1,43 @@
+extends ../_template
+
+block content
+    .btnWrapper
+        .btnItem
+            h4 btn--bordered
+            +button('btn btn--bordered','Закрыть', '','')
+        .btnItem
+            h4 btn--bordered
+            +button('btn btn--bordered','Показать еще','', '')
+        .btnItem
+            h4 btn--colored
+            +button('btn btn--colored','Войти','', '')
+        .btnItem
+            h4 btn--slidered
+            +button('btn btn--slidered','Редактировать','', 'assets/img/sprite.svg#edit')
+        .btnItem
+            h4 btn--slidered
+            +button('btn btn--slidered','Добавить','', 'assets/img/sprite.svg#add')
+        .btnItem
+            h4 btn--slidered
+            +button('btn btn--slidered','Выйти','', 'assets/img/sprite.svg#off')
+        .btnItem
+            h4 btn--delete
+            +button('btn btn--delete','Удалить','', 'assets/img/sprite.svg#delete')
+
+        .btnItem
+            h4 btn--deleteMini
+            span.deleteMini
+
+        .btnItem
+            h4 btn--like
+            +button('btn btn--like','0','', 'assets/img/sprite.svg#no_like')    
+
+        .btnItem           
+            h4 .socials
+                .socials
+                    ul(class="socials_list")
+                        +icon("socials","vk", "", "assets/img/sprite.svg#soc_vk")
+                        +icon("socials","facebook", "", "assets/img/sprite.svg#soc_fb")
+                        +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
+                        +icon("socials","google", "", "assets/img/sprite.svg#social_google")
+                        +icon("socials","google", "", "assets/img/sprite.svg#soc_email")

@@ -1,0 +1,93 @@
+.header
+  width: 100%
+  background-color: gray
+  background-image: url("../img/enter-bg2000.jpg")
+  background-position: 50% 50%
+
+  &_top  
+    +size(100% 260px)
+    padding: 20px 0
+    display: flex
+    align-items: center
+  &_bottom
+    +size(100% 60px)
+    background-color: rgba(241, 241, 241, .9)
+
+.userBlock
+  position: relative
+  +size(100%)
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  align-items: center
+  +w768
+    flex-direction: row
+    justify-content: flex-start
+
+
+  &_pic
+    +size(55px)
+    border-radius: 50%
+    overflow: hidden
+    background-color: darkgray
+    margin-bottom: 15px 
+    +w768
+      +size(100px)
+
+  &_info
+    max-height: 130px
+    max-width: 400px
+    padding: 0 15px
+    overflow: hidden  
+    color: #fff
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    +w768
+      align-items: flex-start
+    .content
+      max-width: 400px
+      overflow: hidden
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      +w768
+        text-align: left   
+    p
+      max-height: 80px
+
+.actionBtns
+  &_list
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+    +w768
+      min-width: 40px
+      flex-direction: column
+      align-items: flex-end
+  &_item
+    margin-bottom: 10px
+
+.search-form
+  +size(300px 100%)
+  padding: 10px 0
+  margin: 0 auto
+  +w480
+    float: right
+
+  +w768
+    width: 380px
+    
+    
+  .form_item
+    border-bottom: none
+    border-radius: 20px
+
+
+  

@@ -1,0 +1,37 @@
+
+mixin nav(className, nav)
+  nav(class=`${className}`)
+    ul(class=`${className}_list`)
+      each href,name in nav
+        li(class=`${className}_item`)
+          a(href=`${href}`, class=`${className}_link`+((name === current) ? ` ${className}_link--active` : ""))=name
+        
+mixin icon(className,link,href,icon)
+  li(class=`${className}_item`)
+    a(class=`${className}_link`, href=`${href}`)=`${link}`
+      svg(class=`${className}_icon`)
+        use(xlink:href=`${icon}`)
+
+mixin button(className,text,href,icon)
+    a(class=`${className}` href=`${href}`)
+      if icon!='' 
+        svg.btn_icon 
+          use(xlink:href=`${icon}`)
+      =`${text}`
+
+mixin form
+  each item in form
+    .form_item
+      input(type=item.type id=item.id name=item.name placeholder=item.placeholder)
+      label(for id=item.id)
+        svg.form_icon
+          use(xlink:href=item.icon)
+      
+
+       
+  
+
+
+
+
+

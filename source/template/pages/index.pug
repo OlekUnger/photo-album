@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+
+  -var title='Регистрация'
+
+block title
+
+  title=title
+
+block content
+
+  .wrapper.index-bg
+
+    .container
+    
+      //- форма регистрации
+      include ../blocks/auth/register
+       
+      //- форма входа
+      include ../blocks/auth/login
+
+      //- форма восстановления пароля
+      include ../blocks/auth/resetPassword
+
+    include ../blocks/footer
+
+      

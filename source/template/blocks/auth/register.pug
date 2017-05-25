@@ -1,0 +1,22 @@
+.authWrapper.authWrapper_register
+  .authHeader
+
+    h2 Регистрация
+  
+  form.auth-form
+    
+    - var form=[ {type: "text", id: "name", name: "name", placeholder: "Имя", icon: "assets/img/sprite.svg#name"},{type: "email", id: "email", name: "email", placeholder: "Электронная почта", icon: "assets/img/sprite.svg#envelope"},{type: "password", id: "password", name: "password", placeholder: "Пароль", icon: "assets/img/sprite.svg#password"}]
+
+    +form
+
+    .formContent
+      p
+       |Ваши данные останутся строго конфиденциальны
+
+      button.btn.btn--colored(type="submit" name="register")
+       | Создать аккаунт
+
+      p
+        | Уже зарегистрированы?
+        span.do-enter
+          | Войти

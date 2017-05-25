@@ -1,0 +1,30 @@
+//- форма входа
+
+.authWrapper.authWrapper_login.hide
+  .authHeader
+
+    h2 Добро пожаловать
+    p
+      | Перед вами сервис, который поможет вам организовывать
+      | свои фотографии в альбомы и поделиться со всем миром!
+  
+  form.auth-form
+    
+    - var form=[ {type: "email", id: "email", name: "email", placeholder: "Электронная почта", icon: "assets/img/sprite.svg#envelope"},{type: "password", id: "password", name: "password", placeholder: "Пароль", icon: "assets/img/sprite.svg#password"}]
+
+    +form
+
+    .formContent
+      p
+       span.do-resetPassword
+          | Забыли пароль?
+      //- .error
+     
+
+      button.btn.btn--colored(type="submit" name="login")
+       | Создать аккаунт
+
+      p
+        | Нет аккаунта?
+        span.do-enter
+          | Зарегистрироваться

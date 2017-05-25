@@ -1,0 +1,92 @@
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin pseudo {
+        content: "";
+        position: absolute;
+}
+
+@mixin size($value) {
+    $width: nth($value, 1);
+    $height: $width;
+
+    @if length($value) > 1 {
+        $height: nth($value, 2);
+    }
+
+    @if is-size($height) {
+        height: $height;
+    } @else {
+        @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+    }
+
+    @if is-size($width) {
+        width: $width;
+    } @else {
+        @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+    }
+}
+
+
+@mixin container {
+  min-width: 320px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+  }
+
+  @media screen and (min-width: 1800px) {
+    width: auto;
+  }
+}
+
+
+
+
+@mixin w320 {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin w480 {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin w998 {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin w768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin w1200 {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin w1800 {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+

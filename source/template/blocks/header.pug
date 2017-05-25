@@ -1,0 +1,37 @@
+header.header
+  .header_top
+      
+    .container
+      .userBlock
+        ul.actionBtns_list
+          li.actionBtns_item
+            +button("btn btn--slidered","Редактировать","#","assets/img/sprite.svg#edit")
+          li.actionBtns_item    
+            +button("btn btn--slidered","Выйти","/","assets/img/sprite.svg#off")
+          //- li.buttons_item    
+          //-   +button("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
+
+        .userBlock_pic
+          img
+        .userBlock_info
+          .content
+              h3 Имя Фамилия
+              p
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates expedita fugiat velit,
+
+          .socials
+            ul(class="socials_list")
+              +icon("socials","vk", "", "assets/img/sprite.svg#soc_vk")
+              +icon("socials","facebook", "", "assets/img/sprite.svg#soc_fb")
+              +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
+              +icon("socials","google", "", "assets/img/sprite.svg#social_google")
+              +icon("socials","google", "", "assets/img/sprite.svg#soc_email") 
+
+  .header_bottom
+    .container
+      form.search-form
+        .form_item
+          input(name="search" type="text" placeholder="" id="search")
+          label(for="search")
+            svg.form_icon
+              use(xlink:href="assets/img/sprite.svg#loupe")
