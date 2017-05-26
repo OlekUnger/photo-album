@@ -1,4 +1,4 @@
 showFormModule.init();
-
+smoothScroll.init();
 
 

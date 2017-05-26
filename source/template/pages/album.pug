@@ -1,5 +1,13 @@
 extends ../_template
 
-block content
+block title
+  title Альбом
 
- 
+block variables
+  -var title='Album'
+
+block content
+  .wrapper
+    include ../blocks/header
+    main.main
+    include ../blocks/footer

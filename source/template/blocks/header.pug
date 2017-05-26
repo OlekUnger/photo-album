@@ -1,37 +1,74 @@
-header.header
-  .header_top
-      
-    .container
-      .userBlock
-        ul.actionBtns_list
-          li.actionBtns_item
-            +button("btn btn--slidered","Редактировать","#","assets/img/sprite.svg#edit")
-          li.actionBtns_item    
-            +button("btn btn--slidered","Выйти","/","assets/img/sprite.svg#off")
-          //- li.buttons_item    
-          //-   +button("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
+mixin actionBtns_list
+  if title!='Search'
+    ul.actionBtns_list
+      if title=='main'
+        li.actionBtns_item
+          +button("btn btn--slidered","Редактировать","#","assets/img/sprite.svg#edit")
+        li.actionBtns_item    
+          +button("btn btn--slidered","Выйти","/","assets/img/sprite.svg#off")
+      if title=='User'
+        li.actionBtns_item    
+          +button("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
+      if title=='Album'
+        li.actionBtns_item    
+          +button("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
+        li.actionBtns_item
+          +button("btn btn--slidered","Редактировать","#","assets/img/sprite.svg#edit")
 
-        .userBlock_pic
-          img
-        .userBlock_info
-          .content
+  
+header.header#header
+
+  //- main-page, user-page
+
+  if title=='main' || title=='User'
+    .header_top
+      .container
+        
+          .userBlock
+            +actionBtns_list
+            .userBlock_pic
+              img
+            .userBlock_info
               h3 Имя Фамилия
-              p
-                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates expedita fugiat velit,
+              if title!='Album'
+                .about
+                  p
+                    |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates expedita fugiat velit,
 
-          .socials
-            ul(class="socials_list")
-              +icon("socials","vk", "", "assets/img/sprite.svg#soc_vk")
-              +icon("socials","facebook", "", "assets/img/sprite.svg#soc_fb")
-              +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
-              +icon("socials","google", "", "assets/img/sprite.svg#social_google")
-              +icon("socials","google", "", "assets/img/sprite.svg#soc_email") 
+                +socials
+    .header_bottom
+      .container
+        form.search-form
+          .form_item
+            input(name="search" type="text" placeholder="" id="search")
+            label(for="search")
+              svg.form_icon
+                use(xlink:href="assets/img/sprite.svg#loupe")
 
-  .header_bottom
-    .container
-      form.search-form
-        .form_item
-          input(name="search" type="text" placeholder="" id="search")
-          label(for="search")
-            svg.form_icon
-              use(xlink:href="assets/img/sprite.svg#loupe")
+  //- Album-page
+
+  if title=='Album'
+    .header_top.header_top--album
+      .container
+        .userBlock
+          +actionBtns_list
+          .userBlock_pic
+            img
+          .userBlock_info
+            h4 Имя Фамилия
+
+        .header_content
+          h3.content_title Заголовок альбома
+          p.content_text
+            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            |  Corrupti quos cum esse nostrum id minus laudantium sint error. 
+            | Voluptatem aliquid suscipit molestiae eius tempora non illo dolore dolorem nam recusandae.20
+
+    .header_bottom
+      .container
+        ul.albumPanel_list
+          +icon('albumPanel', '0', '', 'assets/img/sprite.svg#cam')
+          +icon('albumPanel', '0', '', 'assets/img/sprite.svg#like')
+          +icon('albumPanel', '0', '', 'assets/img/sprite.svg#comments')
+
+  

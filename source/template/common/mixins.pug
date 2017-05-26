@@ -26,6 +26,15 @@ mixin form
       label(for id=item.id)
         svg.form_icon
           use(xlink:href=item.icon)
+
+mixin socials
+  .socials
+    ul(class="socials_list")
+      +icon("socials","vk", "", "assets/img/sprite.svg#soc_vk")
+      +icon("socials","facebook", "", "assets/img/sprite.svg#soc_fb")
+      +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
+      +icon("socials","google", "", "assets/img/sprite.svg#social_google")
+      +icon("socials","google", "", "assets/img/sprite.svg#soc_email")
       
 
        

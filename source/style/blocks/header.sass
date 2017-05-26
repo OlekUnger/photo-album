@@ -6,17 +6,31 @@
 
   &_top  
     +size(100% 260px)
+    overflow: hidden
     padding: 20px 0
     display: flex
     align-items: center
+
   &_bottom
     +size(100% 60px)
     background-color: rgba(241, 241, 241, .9)
 
+  &_content
+    text-align: center
+    +w768
+    .content_title
+      font: 21px/24px $proximaemibold
+      color: #fff
+    .content_text
+      color: rgba(255,255,255,.8)
+
+
+
+// main-page, user-page
+
 .userBlock
   position: relative
   +size(100%)
-  overflow: hidden
   display: flex
   flex-direction: column
   align-items: center
@@ -26,13 +40,15 @@
 
 
   &_pic
-    +size(55px)
+    +size(56px)
     border-radius: 50%
+    border: 2px solid #fff
     overflow: hidden
     background-color: darkgray
     margin-bottom: 15px 
     +w768
       +size(100px)
+      margin-bottom: 0
 
   &_info
     max-height: 130px
@@ -47,8 +63,7 @@
     align-items: center
     +w768
       align-items: flex-start
-    .content
-      max-width: 400px
+    .about
       overflow: hidden
       flex-direction: column
       align-items: center
@@ -65,7 +80,7 @@
     right: 0
     display: flex
     width: 100%
-    flex-direction: row
+    flex-direction: row-reverse
     justify-content: space-between
     +w768
       min-width: 40px
@@ -78,16 +93,58 @@
   +size(300px 100%)
   padding: 10px 0
   margin: 0 auto
-  +w480
-    float: right
-
   +w768
+    float: right
+  +w998
     width: 380px
-    
-    
+     
   .form_item
     border-bottom: none
     border-radius: 20px
+
+
+// album-page
+.header_top--album
+  .userBlock
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    height: auto
+    &_pic
+      +size(56px)
+  .actionBtns_list
+    min-width: 40px
+    flex-direction: column
+    align-items: flex-end
+        
+
+  .header_content
+    max-width: 980px
+    margin: 0 auto
+    +w480
+      width: 80%
+
+.albumPanel
+  &_list
+    height: 100%
+    min-width: 200px
+    max-width: 300px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &_link
+    position: relative
+    color: #000
+    font: 14px/20px $pantonbold
+    padding-left: 30px
+  &_icon
+    position: absolute
+    top: 0
+    left: 0
+    +size(20px)
+    fill: #000
 
 
   
