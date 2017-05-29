@@ -1,4 +1,4 @@
-form#editHeader-form.hide
+form#editHeader-form.hide.popup
   
   .editHeader-form.container
 
@@ -17,11 +17,11 @@ form#editHeader-form.hide
       .socials
         +socials
 
-        .simple-form.hide#editSocial-form
+        .simple-form.hide.popup#editSocial-form
           +input('input','text','','','ссылка','','')
           .form_bottom
             +button('btn--bordered','Сохранить','#', '')
-            +button('btn--transparent reset','Отменить','', '')
+            +button('btn--transparent reset on-off','Отменить','', '')
             
 
     
@@ -31,5 +31,5 @@ form#editHeader-form.hide
       | Изменить фон
 
   .form_bottom.container
-    +button('btn--transparent EditHeaderBtn','Отменить','#', '')
+    +button('btn--transparent EditHeaderBtn on-off','Отменить','#', '')
     +button('btn--colored','Сохранить','', '')
