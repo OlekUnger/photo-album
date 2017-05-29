@@ -1,36 +1,31 @@
 .header
   width: 100%
+  min-height: 300px
+  padding-top: 20px
   background-color: gray
-  background-image: url("../img/enter-bg2000.jpg")
+  background-image: url("../img/main-bg2000.jpg")
   background-position: 50% 50%
-
-  &_top  
-    +size(100% 260px)
-    overflow: hidden
-    padding: 20px 0
-    display: flex
-    align-items: center
 
   &_bottom
     +size(100% 60px)
+    display: flex
+    align-items: center
     background-color: rgba(241, 241, 241, .9)
 
   &_content
-    text-align: center
-    +w768
-    .content_title
-      font: 21px/24px $proximaemibold
-      color: #fff
-    .content_text
-      color: rgba(255,255,255,.8)
-
-
+    position: relative
+    padding-bottom: 20px  
+    width: 100%
+    height: 220px
+    display: flex
+    align-items: center
 
 // main-page, user-page
 
 .userBlock
   position: relative
-  +size(100%)
+  width: 100%
+  min-height: 56px
   display: flex
   flex-direction: column
   align-items: center
@@ -41,6 +36,8 @@
 
   &_pic
     +size(56px)
+    min-height: 56px
+    min-width: 56px
     border-radius: 50%
     border: 2px solid #fff
     overflow: hidden
@@ -48,10 +45,11 @@
     margin-bottom: 15px 
     +w768
       +size(100px)
+      min-height: 100px
+      min-width: 100px
       margin-bottom: 0
 
   &_info
-    max-height: 130px
     max-width: 400px
     padding: 0 15px
     overflow: hidden  
@@ -73,6 +71,14 @@
     p
       max-height: 80px
 
+.userBlock--min
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  height: auto
+  .userBlock_pic
+    margin: 0
+
 .actionBtns
   &_list
     position: absolute
@@ -82,6 +88,7 @@
     width: 100%
     flex-direction: row-reverse
     justify-content: space-between
+    z-index: 2
     +w768
       min-width: 40px
       flex-direction: column
@@ -89,62 +96,90 @@
   &_item
     margin-bottom: 10px
 
-.search-form
-  +size(300px 100%)
-  padding: 10px 0
-  margin: 0 auto
-  +w768
-    float: right
-  +w998
-    width: 380px
-     
-  .form_item
-    border-bottom: none
-    border-radius: 20px
-
 
 // album-page
-.header_top--album
-  .userBlock
-    position: relative
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    height: auto
-    &_pic
-      +size(56px)
+
+.header_content--album
+  position: relative
+  min-height: 220px
   .actionBtns_list
     min-width: 40px
     flex-direction: column
     align-items: flex-end
-        
 
-  .header_content
+  .description
     max-width: 980px
     margin: 0 auto
+    text-align: center
+    color: #fff
+    +w768
+      &_title
+        font: 21px/24px $proximaemibold
+      &_text
+        color: rgba(255,255,255,.8)
+
     +w480
       width: 80%
 
 .albumPanel
+
   &_list
-    height: 100%
     min-width: 200px
-    max-width: 300px
+    max-width: 500px
     margin: 0 auto
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: space-around
+  &_item
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
   &_link
     position: relative
+    display: block
     color: #000
     font: 14px/20px $pantonbold
     padding-left: 30px
+    +w768
+      padding-left: 0
+    span
+      margin-left: 5px
+      font-size: 0
+    +w768
+      span
+        font-size: 16px
   &_icon
     position: absolute
     top: 0
     left: 0
     +size(20px)
     fill: #000
+    +w768
+      display: none
+
+.header_bottom--fixed
+  display: none
+  +size(100% 60px)
+  align-items: center
+  justify-content: space-between
+
+  .fixedItem
+    +w768
+      width: 30%
+  .userBlock_info
+    display: none
+    color: $dark-gray
+    +w768
+      display: flex
+  .description_title
+    color: $dark-gray
+    text-align: center
+  .btn--slidered
+    float: right
+
+  // display: none
+  
+   
 
 
   

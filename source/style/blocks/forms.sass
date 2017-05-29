@@ -1,0 +1,105 @@
+.form_item
+  width: 100%
+  position: relative
+  text-align: left
+  padding: 10px 20px
+  background-color: #fff
+  border-radius: 20px
+  input
+    width: 100% 
+    padding: 0 10px 0 25px
+    order: 2
+    &:focus~label>.form_icon
+      fill: $blue
+  label
+    +size(15px 20px)
+    position: absolute
+    top: 7px
+    left: 19px
+
+.form_content
+  width: 100%
+  display: flex
+  flex-direction: column
+
+.form_bottom
+  height: 60px
+  width: 100%
+  background: transparent
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+// поиск
+
+.search-form
+  +size(300px 100%)
+  padding: 10px 0
+  margin: 0 auto
+  +w768
+    float: right
+  +w998
+    width: 380px 
+
+// редактирование шапки и профиля
+
+.editHeader-form
+  position: relative
+  width: 100%
+  max-width: 1300px
+  min-height: 240px
+  padding-top: 20px
+  padding-bottom: 20px
+  background-color: #ccc
+  display: flex
+  flex-direction: column
+  align-items: center
+  +w768
+    flex-direction: row
+    justify-content: space-around
+
+  .form_item
+    margin-bottom: 10px 
+  input
+    padding-left: 0
+  .form_content
+    align-items: center
+    padding-bottom: 20px
+    max-width: 480px
+    +w768
+      align-items: flex-start
+
+  .btn--upload
+    margin-top: 10px
+    color: #fff 
+    font: 12px/20px $proximaemibold
+    &:hover
+      color: $blue
+      .btn_icon
+        fill: $blue
+    .btn_icon
+      fill: #fff 
+
+  .userBlock_pic
+    .btn--upload
+      display: none
+      +w768
+        display: block
+
+.simple-form
+  +size(280px 110px)
+  position: absolute
+  padding: 10px
+  background-color: #FFF
+  bottom: -120px
+  left: -81px
+  box-shadow: 0 1px 4px rgba(0,0,0,.15)
+  .form_item
+    border: 1px solid $gray
+  .form_bottom
+    justify-content: flex-start!important
+    height: auto
+
+
+
+

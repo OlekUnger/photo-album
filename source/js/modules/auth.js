@@ -1,4 +1,4 @@
-var showFormModule = (function(){
+showFormModule = (function(){
 
   var init = function(){
     _setUpListeners();

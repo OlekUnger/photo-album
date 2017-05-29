@@ -6,11 +6,18 @@ mixin nav(className, nav)
         li(class=`${className}_item`)
           a(href=`${href}`, class=`${className}_link`+((name === current) ? ` ${className}_link--active` : ""))=name
         
-mixin icon(className,link,href,icon)
-  li(class=`${className}_item`)
-    a(class=`${className}_link`, href=`${href}`)=`${link}`
+mixin icon(id,className,link,href,icon)
+  li(class=`${className}_item`)  
+    a(id=`${id}` class=`${className}_link`, href=`${href}`)=`${link}`
       svg(class=`${className}_icon`)
         use(xlink:href=`${icon}`)
+
+mixin button(className,text,icon)
+    button(class=`${className}`)
+      if icon!='' 
+        svg.btn_icon 
+          use(xlink:href=`${icon}`)
+      =`${text}`
 
 mixin button(className,text,href,icon)
     a(class=`${className}` href=`${href}`)
@@ -19,23 +26,28 @@ mixin button(className,text,href,icon)
           use(xlink:href=`${icon}`)
       =`${text}`
 
-mixin form
-  each item in form
-    .form_item
-      input(type=item.type id=item.id name=item.name placeholder=item.placeholder)
-      label(for id=item.id)
+     
+
+mixin input(tag,type,id,name,placeholder,value,icon)
+  .form_item
+    if tag=='input'
+      input(type=type id=id name=name placeholder=placeholder value=value)
+    if tag=='textarea'
+      textarea(rows='3' id=id name=name placeholder=placeholder)=value
+    if icon!=''
+      label(for id=id)
         svg.form_icon
-          use(xlink:href=item.icon)
+          use(xlink:href=icon)
+  
 
 mixin socials
-  .socials
-    ul(class="socials_list")
-      +icon("socials","vk", "", "assets/img/sprite.svg#soc_vk")
-      +icon("socials","facebook", "", "assets/img/sprite.svg#soc_fb")
-      +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
-      +icon("socials","google", "", "assets/img/sprite.svg#social_google")
-      +icon("socials","google", "", "assets/img/sprite.svg#soc_email")
-      
+  ul(class="socials_list")
+    +icon("vk","socials","vk", "a", "assets/img/sprite.svg#soc_vk")
+    +icon("facebook","socials","Facebook", "b", "assets/img/sprite.svg#soc_fb")
+    +icon("twitter","socials","Twitter", "c", "assets/img/sprite.svg#soc_twitter")
+    +icon("google","socials","Google", "d", "assets/img/sprite.svg#social_google")
+    +icon("email","socials","Email", "e", "assets/img/sprite.svg#soc_email")
+    
 
        
   

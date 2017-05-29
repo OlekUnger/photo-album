@@ -9,12 +9,11 @@
       | свои фотографии в альбомы и поделиться со всем миром!
   
   form.auth-form
-    
-    - var form=[ {type: "email", id: "email", name: "email", placeholder: "Электронная почта", icon: "assets/img/sprite.svg#envelope"},{type: "password", id: "password", name: "password", placeholder: "Пароль", icon: "assets/img/sprite.svg#password"}]
+    +input('input','email','email','email','Электронная почта','','assets/img/sprite.svg#envelope')
+    +input('input','password','password','password','Пароль','','assets/img/sprite.svg#password')
+   
 
-    +form
-
-    .formContent
+    .form_content
       p
        span.do-resetPassword
           | Забыли пароль?

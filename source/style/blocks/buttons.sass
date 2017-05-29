@@ -15,7 +15,7 @@ svg[class*=_icon]
 
 .btn
   position: relative
-  display: block
+  display: inline-block
   color: #fff
   height: 40px
   font: 14px/40px $pantonbold
@@ -35,56 +35,70 @@ svg[class*=_icon]
     height: 21px
   // transition: all .2s ease-in-out
 
-  &--bordered
-    color: $blue
-    background-color: #fff
-    border: 1px solid $blue
+.btn--bordered
+  @extend .btn
+  color: $blue
+  background-color: #fff
+  border: 1px solid $blue
+  &:hover
+    background-color: $blue
+    color: #fff
+
+.btn--transparent
+  @extend .btn
+  color: $blue
+  font-size: 16px
+  &:hover
+    color: $blue-hover
+
+
+.btn--colored
+  @extend .btn
+  background-color: $blue
+  &:hover
+    background-color: $blue-hover
+      
+
+.btn--slidered
+  @extend .btn
+  padding: 0
+  width: 40px
+  font-size: 0
+  box-shadow: 0 1px 2px rgba(0,0,0,0.22)
+  background-color: #fff
+  .btn_icon
+    top: 9px
+    left: 10px
+
+  &:hover
+    .btn--slidered_icon
+      fill: $blue  
+      
+  +w768
     &:hover
       background-color: $blue
-      color: #fff
-
-
-  &--colored
-    background-color: $blue
-    &:hover
-      background-color: $blue-hover
-      
-
-  &--slidered
-    width: 40px
-    font-size: 0
-    box-shadow: 0 1px 2px rgba(0,0,0,0.22)
-    background-color: #fff
-    .btn_icon
-      top: 9px
-      left: 10px
-
-    &:hover
+      font: 14px/40px $pantonbold
+      box-shadow: none
+      width: auto
+      padding-left: 40px
+      padding-right: 10px
       .btn_icon
-        fill: $blue  
-      
-    +w768
-      &:hover
-        background-color: $blue
-        font: 14px/40px $pantonbold
-        box-shadow: none
-        width: auto
-        padding-left: 40px
-        .btn_icon
-          fill: #fff
+        fill: #fff
 
-  &--delete,
-  &--like
-    padding-left: 50px
-    background-color: $red
-    &:hover
-      background-color: $red-hover
-    .btn_icon
-      fill: #fff
-      top: 9px
-      left: 20px
-  &--like
-    font-size: 16px
+.btn--delete,
+.btn--like
+  @extend .btn
+  padding-left: 50px
+  background-color: $red
+  &:hover
+    background-color: $red-hover
+  .btn_icon
+    fill: #fff
+    top: 9px
+    left: 20px
+
+.btn--like
+  font-size: 16px
 
   
 .deleteMini
@@ -110,7 +124,8 @@ svg[class*=_icon]
     transform: rotate(-45deg)
 
 .socials
-  &_list
+  position: relative
+  &_list 
     font-size: 0
     margin: 0
     padding: 0
@@ -125,4 +140,24 @@ svg[class*=_icon]
     fill: rgba(255,255,255,.8)
     &:hover
       fill: #fff
+
+.active
+  .socials_icon
+    fill: #fff
+
+.btn--upload
+  max-width: 170px
+  font: 16px/19px $proximalight
+  color: $gray
+  display: flex
+  flex-direction: column
+  align-items: center
+  span
+    color: $blue
+    font-family: $proximaemibold
+  .btn_icon
+    position: static
+    +size(40px 32px)
+    fill: $gray
+
      

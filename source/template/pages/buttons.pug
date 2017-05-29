@@ -4,25 +4,20 @@ block content
     .btnWrapper
         .btnItem
             h4 btn--bordered
-            +button('btn btn--bordered','Закрыть', '','')
+            +button('btn--bordered','Закрыть', '','')
         .btnItem
             h4 btn--bordered
-            +button('btn btn--bordered','Показать еще','', '')
+            +button('btn--bordered','Показать еще','', '')
         .btnItem
             h4 btn--colored
-            +button('btn btn--colored','Войти','', '')
+            +button('btn--colored','Войти','', '')
         .btnItem
-            h4 btn--slidered
-            +button('btn btn--slidered','Редактировать','', 'assets/img/sprite.svg#edit')
-        .btnItem
-            h4 btn--slidered
-            +button('btn btn--slidered','Добавить','', 'assets/img/sprite.svg#add')
-        .btnItem
-            h4 btn--slidered
-            +button('btn btn--slidered','Выйти','', 'assets/img/sprite.svg#off')
+            h4 btn--transparent
+            +button('btn--transparent','Отменить','', '')    
+        
         .btnItem
             h4 btn--delete
-            +button('btn btn--delete','Удалить','', 'assets/img/sprite.svg#delete')
+            +button('btn--delete','Удалить','', 'assets/img/sprite.svg#delete')
 
         .btnItem
             h4 btn--deleteMini
@@ -30,7 +25,16 @@ block content
 
         .btnItem
             h4 btn--like
-            +button('btn btn--like','0','', 'assets/img/sprite.svg#no_like')    
+            +button('btn--like','0','', 'assets/img/sprite.svg#no_like')
+
+        .btnItem
+            h4 btn--upload
+            button.btn--upload
+                svg.btn_icon
+                    use(xlink:href="assets/img/sprite.svg#cam")
+                | Перетащите файлы сюда или 
+                span
+                    |выберите файл    
 
         .btnItem           
             h4 .socials
@@ -41,3 +45,13 @@ block content
                         +icon("socials","twitter", "", "assets/img/sprite.svg#soc_twitter")
                         +icon("socials","google", "", "assets/img/sprite.svg#social_google")
                         +icon("socials","google", "", "assets/img/sprite.svg#soc_email")
+        .btnItem
+            h4 btn--slidered
+            +button('btn--slidered','Редактировать','', 'assets/img/sprite.svg#edit')
+        
+        
+            h4 btn--slidered
+            +button('btn--slidered','Добавить','', 'assets/img/sprite.svg#add')
+        
+            h4 btn--slidered
+            +button('btn--slidered','Выйти','', 'assets/img/sprite.svg#off') 

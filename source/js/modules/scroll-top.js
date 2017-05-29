@@ -1,4 +1,4 @@
-var smoothScroll =(function(){
+smoothScroll =(function(){
 
     var init = function(){
         _setUpListners();
@@ -20,7 +20,6 @@ var smoothScroll =(function(){
     return {
         init: init
     };
-
 
 })();
 

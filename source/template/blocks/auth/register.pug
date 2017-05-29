@@ -4,12 +4,11 @@
     h2 Регистрация
   
   form.auth-form
-    
-    - var form=[ {type: "text", id: "name", name: "name", placeholder: "Имя", icon: "assets/img/sprite.svg#name"},{type: "email", id: "email", name: "email", placeholder: "Электронная почта", icon: "assets/img/sprite.svg#envelope"},{type: "password", id: "password", name: "password", placeholder: "Пароль", icon: "assets/img/sprite.svg#password"}]
+    +input('input','text','name','name','Имя','','assets/img/sprite.svg#name')
+    +input('input','email','email','email','Электронная почта','','assets/img/sprite.svg#envelope')
+    +input('input','password','password','password','Пароль','','assets/img/sprite.svg#password')
 
-    +form
-
-    .formContent
+    .form_content
       p
        |Ваши данные останутся строго конфиденциальны
 

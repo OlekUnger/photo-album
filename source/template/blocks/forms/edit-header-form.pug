@@ -1,0 +1,35 @@
+form#editHeader-form.hide
+  
+  .editHeader-form.container
+
+    a.userBlock_pic.edit-user
+      button.btn--upload
+        svg.btn_icon
+          use(xlink:href="assets/img/sprite.svg#cam")
+        | Изменить фото
+      img
+
+    .form_content
+
+      +input('input','text','user-name','user-name','Имя Фамилия','','')
+      +input('textarea','text','user-text','user-text','О себе','','')
+      
+      .socials
+        +socials
+
+        .simple-form.hide#editSocial-form
+          +input('input','text','','','ссылка','','')
+          .form_bottom
+            +button('btn--bordered','Сохранить','#', '')
+            +button('btn--transparent reset','Отменить','', '')
+            
+
+    
+    button.btn--upload.edit-user
+      svg.btn_icon
+          use(xlink:href="assets/img/sprite.svg#cam")
+      | Изменить фон
+
+  .form_bottom.container
+    +button('btn--transparent EditHeaderBtn','Отменить','#', '')
+    +button('btn--colored','Сохранить','', '')

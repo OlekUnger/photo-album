@@ -2,11 +2,6 @@
   background-image: url('../img/enter-bg1000.jpg')
   background-size: cover
   background-position: 50% 50%
-  // display: flex
-  // flex-direction: column
-  // justify-content: space-between
-  // z-index: -1
-
   +w1200
     background-image: url('../img/enter-bg2000.jpg')
 
@@ -37,6 +32,7 @@
   p
     margin: 10px 0  
 
+
 .auth-form
   position: relative
   width: 300px
@@ -49,31 +45,13 @@
     margin: 10px 0
     width: 100%
 
-.form_item
-  position: relative
-  text-align: left
-  padding: 10px 20px
-  background-color: #fff
-  border-bottom: 1px solid $light-gray
-  input
-    padding: 0 10px 0 25px
-    width: 100%
-    order: 2
-    &:focus~label>.form_icon
-      fill: $blue
-  label
-    +size(15px 20px)
-    position: absolute
-    top: 7px
-    left: 19px  
-    
-.formContent
-  @extend .form_item
-  border-bottom: none
-  display: flex
-  flex-direction: column
-  font-size: 14px
+  .form_item
+    border-radius: 0
+    border-bottom: 1px solid $light-gray
 
+  .form_content
+    font-size: 14px
+    padding: 10px 20px    
 
 span.do-enter,
 span.do-resetPassword
@@ -95,7 +73,9 @@ span.do-resetPassword
 .visible
   display: block
 
-
+.authWrapper_resetPassword
+  .form_item
+    border-top: 1px solid $light-gray
 
 // форма поиска
   
