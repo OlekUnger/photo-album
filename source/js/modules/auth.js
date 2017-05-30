@@ -1,4 +1,4 @@
-showFormModule = (function(){
+auth = (function(){
 
   var init = function(){
     _setUpListeners();
@@ -13,21 +13,21 @@ showFormModule = (function(){
   var _showEnterForm = function(e){
     e.preventDefault();
     
-    if($('.authWrapper_resetPassword').hasClass('hide')){
-      $('.authWrapper_register, .authWrapper_login').toggleClass("hide");
+    if($('.get-resetPassword').hasClass('hide')){
+      $('.get-register, .get-login').toggleClass("hide");
    
-    }else if($('.authWrapper_register').hasClass('hide')) {
-      $('.authWrapper_resetPassword, .authWrapper_login' ).toggleClass("hide");
+    }else if($('.getregister').hasClass('hide')) {
+      $('.get-resetPassword, .get-login' ).toggleClass("hide");
 
     } else {
-      $('.authWrapper_register, .authWrapper_login').toggleClass("hide");
+      $('.getregister, .get-login').toggleClass("hide");
     }
    
   };
 
   var _showRegisterForm = function(e){
     e.preventDefault();
-    $('.authWrapper_resetPassword, .authWrapper_login' ).toggleClass("hide");
+    $('.get-resetPassword, .get-login' ).toggleClass("hide");
   };
   
   

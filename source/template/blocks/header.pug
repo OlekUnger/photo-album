@@ -3,17 +3,17 @@ mixin actionBtns_list
     ul.actionBtns_list
       if title=='main'
         li.actionBtns_item
-          +button("btn--slidered EditHeaderBtn","Редактировать","","assets/img/sprite.svg#edit")
+          +link("btn btn--slidered editHeader-btn","Редактировать","","assets/img/sprite.svg#edit")
         li.actionBtns_item    
-          +button("btn--slidered","Выйти","","assets/img/sprite.svg#off")
+          +link("btn btn--slidered","Выйти","","assets/img/sprite.svg#off")
       if title=='User'
         li.actionBtns_item    
-          +button("btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
+          +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
       if title=='Album'
         li.actionBtns_item    
-          +button("btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
+          +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
         li.actionBtns_item
-          +button("btn--slidered toggleEditHeader","Редактировать","#","assets/img/sprite.svg#edit")
+          +link("btn btn--slidered editHeader-btn","Редактировать","#","assets/img/sprite.svg#edit")
 
   
 header.header#header
@@ -23,10 +23,10 @@ header.header#header
       .header_content
         +actionBtns_list
 
-        .userBlock
-          .userBlock_pic
+        .infoBlock
+          .infoBlock_pic
             img
-          .userBlock_info
+          .infoBlock_content
             h3 Имя Фамилия
             .about
               p
@@ -51,11 +51,11 @@ header.header#header
       .header_content--album
         +actionBtns_list
       
-        .userBlock--min
+        .infoBlock--min
           +actionBtns_list
-          .userBlock_pic
+          .infoBlock_pic
             img
-          .userBlock_info
+          .infoBlock_content
             h4 Имя Фамилия
 
         .description
@@ -69,14 +69,14 @@ header.header#header
 
     .header_bottom
       .container
-        -var albumPanel_list=[{'href':'','text':'Фотографий', 'count': '0','icon':'assets/img/sprite.svg#cam'},{'href':'','text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}, {'href':'','text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'}]
-        .albumPanel
-          ul.albumPanel_list
-            each item in albumPanel_list
-              li.albumPanel_item
-                a(href=item.href).albumPanel_link=item.count
+        -var panel_list=[{'href':'','text':'Фотографий', 'count': '0','icon':'assets/img/sprite.svg#cam'},{'href':'','text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}, {'href':'','text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'}]
+        .panel
+          ul.panel_list
+            each item in panel_list
+              li.panel_item
+                a(href=item.href).panel_link=item.count
                   span=item.text
-                  svg.albumPanel_icon
+                  svg.btn_icon
                     use(xlink:href=item.icon)
 
         .header_bottom--fixed

@@ -23,8 +23,6 @@ svg[class*=_icon]
   font-weight: 500
   border-radius: 20px
   padding: 0px 20px
-  outline: none
-  border: none
   cursor: pointer
   letter-spacing: .7px
   &_icon
@@ -35,8 +33,17 @@ svg[class*=_icon]
     height: 21px
   // transition: all .2s ease-in-out
 
+.btn--flex
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  // padding: 0
+  .btn_icon
+    position: static
+    margin-right: 10px
+
 .btn--bordered
-  @extend .btn
   color: $blue
   background-color: #fff
   border: 1px solid $blue
@@ -45,7 +52,6 @@ svg[class*=_icon]
     color: #fff
 
 .btn--transparent
-  @extend .btn
   color: $blue
   font-size: 16px
   &:hover
@@ -53,14 +59,12 @@ svg[class*=_icon]
 
 
 .btn--colored
-  @extend .btn
   background-color: $blue
   &:hover
     background-color: $blue-hover
       
 
 .btn--slidered
-  @extend .btn
   padding: 0
   width: 40px
   font-size: 0
@@ -87,7 +91,6 @@ svg[class*=_icon]
 
 .btn--delete,
 .btn--like
-  @extend .btn
   padding-left: 50px
   background-color: $red
   &:hover
@@ -99,7 +102,6 @@ svg[class*=_icon]
 
 .btn--like
   font-size: 16px
-
   
 .deleteMini
   display: block

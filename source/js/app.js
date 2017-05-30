@@ -1,10 +1,10 @@
-showFormModule.init();
+auth.init();
 
 fixedMenu.init();
 
 smoothScroll.init();
 
-showForm.init();
+showPopups.init();
 
 
 

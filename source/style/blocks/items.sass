@@ -1,2 +1,46 @@
+.item
+  +size(300px 310px)
+  border-radius: 3px
+  box-shadow: 0 1px 4px rgba(0,0,0,.15)
+  &_content
+    +size(100% 200px)
+    background-color: $much-light
+  &_header
+    +size(100% 70px)
 
-  
+  .panel
+    &_link
+      color: $dark-gray
+      font: 16px/24px $pantonbold
+      font-weight: 400
+
+  &_footer
+    +size(100% 40px)
+    padding: 0 10px
+    background-color: $much-light
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    
+  .album_title
+    position: relative
+    padding-left: 30px
+    font: 14px/21px $proximaemibold
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    .btn_icon
+      top: 0
+      left: 0
+
+  .infoBlock--min
+    height: 100%
+    padding: 10px 0
+    align-items: center
+
+  .infoBlock_content
+    height: 100%
+    justify-content: space-between
+    color: $dark-gray
+  .photo_title 
+    font: 14px/21px $proximalight

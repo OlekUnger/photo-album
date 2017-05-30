@@ -2,8 +2,8 @@ form#editHeader-form.hide.popup
   
   .editHeader-form.container
 
-    a.userBlock_pic.edit-user
-      button.btn--upload
+    a.infoBlock_pic.edit-user
+      button.btn.btn--upload
         svg.btn_icon
           use(xlink:href="assets/img/sprite.svg#cam")
         | Изменить фото
@@ -20,16 +20,16 @@ form#editHeader-form.hide.popup
         .simple-form.hide.popup#editSocial-form
           +input('input','text','','','ссылка','','')
           .form_bottom
-            +button('btn--bordered','Сохранить','#', '')
-            +button('btn--transparent reset on-off','Отменить','', '')
+            +button('btn btn--bordered save','Сохранить','')
+            +button('btn btn--transparent reset-btn','Отменить', '')
             
 
     
-    button.btn--upload.edit-user
+    button.btn.btn--upload.edit-user
       svg.btn_icon
           use(xlink:href="assets/img/sprite.svg#cam")
       | Изменить фон
 
   .form_bottom.container
-    +button('btn--transparent EditHeaderBtn on-off','Отменить','#', '')
-    +button('btn--colored','Сохранить','', '')
+    +link('btn btn--transparent editHeader-btn','Отменить','#', '')
+    +button('btn btn--colored save','Сохранить', '')

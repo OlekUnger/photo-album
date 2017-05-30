@@ -1,6 +1,23 @@
 extends ../_template
 
 block content
-   .btnWrapper
-        .btnItem
+  .itemWrapper(style=" margin-top: 20px;display: flex; flex-wrap: wrap;").container
+    article.item
+      .item_content
+      .item_header.container
+        .infoBlock--min
+          .infoBlock_pic
+            img
+          .infoBlock_content 
+            .photo_title Название фотографии
+
+            -var panel_list=[{'href':'','text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'href':'','text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
+            .panel
+              ul.panel_list
+                each item in panel_list
+                  li.panel_item
+                    +link('panel_link',item.count, item.href, item.icon)
+            
+      .item_footer
+        +button('album_title','Заголовок альбома','assets/img/sprite.svg#album')
           
