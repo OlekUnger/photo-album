@@ -3,9 +3,9 @@ mixin actionBtns_list
     ul.actionBtns_list
       if title=='main'
         li.actionBtns_item
-          +link("btn btn--slidered editHeader-btn","Редактировать","","assets/img/sprite.svg#edit")
+          +button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
         li.actionBtns_item    
-          +link("btn btn--slidered","Выйти","","assets/img/sprite.svg#off")
+          +button("btn btn--slidered","Выйти","assets/img/sprite.svg#off")
       if title=='User'
         li.actionBtns_item    
           +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
@@ -13,7 +13,7 @@ mixin actionBtns_list
         li.actionBtns_item    
           +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
         li.actionBtns_item
-          +link("btn btn--slidered editHeader-btn","Редактировать","#","assets/img/sprite.svg#edit")
+          +button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
 
   
 header.header#header
@@ -24,7 +24,7 @@ header.header#header
         +actionBtns_list
 
         .infoBlock
-          .infoBlock_pic
+          .user_pic
             img
           .infoBlock_content
             h3 Имя Фамилия
@@ -53,7 +53,7 @@ header.header#header
       
         .infoBlock--min
           +actionBtns_list
-          .infoBlock_pic
+          .user_pic
             img
           .infoBlock_content
             h4 Имя Фамилия
@@ -83,16 +83,16 @@ header.header#header
 
           .fixedItem
             .userBlock--min
-              .userBlock_pic
+              .user_pic
                 img
-              .userBlock_info
+              .userBlock_content
                 h4 Имя Фамилия
 
           .fixedItem 
             h3.description_title Заголовок альбома
 
           .fixedItem 
-            +button("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
+            +link("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
        
 
 

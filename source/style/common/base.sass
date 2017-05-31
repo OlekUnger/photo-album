@@ -42,8 +42,12 @@ h4
 
 
 p
+  font-size: 14px
+  line-height: 21px
   margin: 10px 0
   padding: 0
+  +w768
+    font-size: 16px
 
 *
   box-sizing: border-box
@@ -52,6 +56,7 @@ button
   outline: none
   background-color: transparent
   border: none
+  cursor: pointer
 
 form
   position: relative
@@ -94,6 +99,10 @@ textarea
 
 .main 
   min-height: 1000px
+  padding: 20px 0
+  &_content
+    display: flex
+    flex-wrap: wrap
   
 .error
   background-color: $error
@@ -152,24 +161,8 @@ textarea
   flex-direction: column
   align-items: center
   +w768
-    
     flex-direction: row
     justify-content: flex-start
-
-  &_pic
-    +size(56px)
-    min-height: 56px
-    min-width: 56px
-    border-radius: 50%
-    border: 2px solid #fff
-    overflow: hidden
-    background-color: $light-gray
-    margin-bottom: 15px 
-    +w768
-      +size(100px)
-      min-height: 100px
-      min-width: 100px
-      margin-bottom: 0
 
   &_content
     max-width: 400px
@@ -193,12 +186,27 @@ textarea
   p
     max-height: 80px
 
+.user_pic
+  +size(56px)
+  min-height: 56px
+  min-width: 56px
+  border-radius: 50%
+  border: 2px solid #fff
+  overflow: hidden
+  background-color: $light-gray
+  margin-bottom: 15px 
+  +w768
+    +size(100px)
+    min-height: 100px
+    min-width: 100px
+    margin-bottom: 0
+
 .infoBlock--min
+  height: 56px
   display: flex
   flex-direction: row
   justify-content: flex-start
-  height: auto
-  .infoBlock_pic
+  .user_pic
     margin: 0
     +size(56px)
     min-height: 56px
