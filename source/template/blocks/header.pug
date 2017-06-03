@@ -1,99 +1,123 @@
 mixin actionBtns_list
-  if title!='Search'
-    ul.actionBtns_list
-      if title=='main'
-        li.actionBtns_item
-          +button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
-        li.actionBtns_item    
-          +button("btn btn--slidered","Выйти","assets/img/sprite.svg#off")
-      if title=='User'
-        li.actionBtns_item    
-          +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
-      if title=='Album'
-        li.actionBtns_item    
-          +link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
-        li.actionBtns_item
-          +button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
+	if title != 'Search'
+		ul.actionBtns_list
+			if title == 'main'
+				li.actionBtns_item
+					+button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
+				li.actionBtns_item
+					+button("btn btn--slidered","Выйти","assets/img/sprite.svg#off")
+			if title == 'User'
+				li.actionBtns_item
+					+link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
+			if title == 'Album'
+				li.actionBtns_item
+					+link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
+				li.actionBtns_item
+					+button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
 
-  
-header.header#header
-  //- main-page, user-page
-  if title =='main' || title == 'User'
-    .container
-      .header_content
-        +actionBtns_list
+if title=='Search'
+	.header--search
+		.container
+			h2.main_title #{main_title}
+		.header_bottom
+			.container
+				.header_bottom--search
+					.fixedItem
+						.infoBlock--min
+							a(href="album.html").user_pic
+								img(src="assets/img/user-pic1.jpg")
+							.infoBlock_content
+								h4 Имя Фамилия
 
-        .infoBlock
-          .user_pic
-            img
-          .infoBlock_content
-            h3 Имя Фамилия
-            .about
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					.fixedItem
+						form.search-form
+							.form_item
+								input(name="search" type="text" placeholder="Исследовать мир" id="search")
+								label(for="search")
+									svg.form_icon
+										use(xlink:href="assets/img/sprite.svg#loupe")
+					.fixedItem
+						+button('search-new','Показать новые','')
 
-            .socials
-              +socials
+if title!='Search'
+	header.header#header
+		//- main-page, user-page
+		if title == 'main' || title == 'User'
+			.container
+				.header_content
+					+actionBtns_list
 
-    .header_bottom
-      .container
-        form.search-form
-          .form_item
-            input(name="search" type="text" placeholder="Исследовать мир" id="search")
-            label(for="search")
-              svg.form_icon
-                use(xlink:href="assets/img/sprite.svg#loupe")
+					.infoBlock
+						.user_pic
+							img(src="assets/img/user-pic1.jpg")
+						.infoBlock_content
+							h3 Имя Фамилия
+							.about
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-  //- Album-page
+							.socials
+								+socials
 
-  if title=='Album'
-    .container
-      .header_content--album
-        +actionBtns_list
-      
-        .infoBlock--min
-          +actionBtns_list
-          .user_pic
-            img
-          .infoBlock_content
-            h4 Имя Фамилия
+			.header_bottom
+				.container
+					form.search-form
+						.form_item
+							input(name="search" type="text" placeholder="Исследовать мир" id="search")
+							label(for="search")
+								svg.form_icon
+									use(xlink:href="assets/img/sprite.svg#loupe")
 
-        .description
-          h3.description_title Заголовок альбома
-          p.description_text
-            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            |  Corrupti quos cum esse nostrum id minus laudantium sint error. 
-            | Voluptatem aliquid suscipit molestiae eius tempora non illo dolore dolorem nam recusandae.20
-            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+		//- Album-page
 
+		if title == 'Album'
+			.container
+				.header_content--album
+					+actionBtns_list
 
-    .header_bottom
-      .container
-        -var panel_list=[{'href':'','text':'Фотографий', 'count': '0','icon':'assets/img/sprite.svg#cam'},{'href':'','text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}, {'href':'','text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'}]
-        .panel
-          ul.panel_list
-            each item in panel_list
-              li.panel_item
-                a(href=item.href).panel_link=item.count
-                  span=item.text
-                  svg.btn_icon
-                    use(xlink:href=item.icon)
+					.infoBlock--min
+						.user_pic
+							img(src="assets/img/user-pic1.jpg")
+						.infoBlock_content
+							h4 Имя Фамилия
 
-        .header_bottom--fixed
-
-          .fixedItem
-            .userBlock--min
-              .user_pic
-                img
-              .userBlock_content
-                h4 Имя Фамилия
-
-          .fixedItem 
-            h3.description_title Заголовок альбома
-
-          .fixedItem 
-            +link("btn btn--slidered","На главную", "#","assets/img/sprite.svg#home")
-       
+					.description
+						h3.description_title Заголовок альбома
+						p.description_text
+							|  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							|  Corrupti quos cum esse nostrum id minus laudantium sint error.
+							| Voluptatem aliquid suscipit molestiae eius tempora non illo dolore dolorem nam recusandae.20
+							|  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 
-  
+			.header_bottom
+				.container
+				
+					-var panel_list=[{'href':'','text':'Фотографий', 'count': '0','icon':'assets/img/sprite.svg#cam'},{'href':'','text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}, {'href':'','text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'}]
+					.panel
+						ul.panel_list
+							each item in panel_list
+								li.panel_item
+									a(href=item.href).panel_link=item.count
+										span=item.text
+										svg.btn_icon
+											use(xlink:href=item.icon)
+
+			
+					.header_bottom--fixed
+						.fixedItem
+							.infoBlock--min
+								a(href="album.html").user_pic
+									img(src="assets/img/user-pic1.jpg")
+								.infoBlock_content
+									h4 Имя Фамилия
+
+						.fixedItem
+							h3.description_title Заголовок альбома
+
+						.fixedItem
+							+link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
+		
+
+		//- search-page
+

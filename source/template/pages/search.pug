@@ -1,15 +1,14 @@
 extends ../_template
 
 block title
-  title Главная страница
+  title Поиск
 
 block variables
-  - var title = 'main'
-  - var main_title = 'Новое в мире'
+  -var title='Search'
+  -var main_title='Исследуй мир'
 
 block content
   .wrapper
     include ../blocks/header
     include ../blocks/main-content
     include ../blocks/footer
-

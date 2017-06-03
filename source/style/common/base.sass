@@ -1,213 +1,213 @@
 // styles
 html
-  font-size: 10px
-
+	font-size: 10px
 
 html,
 body
-  width: 100%
-  height: 100%
-
+	width: 100%
+	height: 100%
 
 body
-  position: relative
-  font-size: 16px
-  line-height: 1.42
-  -webkit-font-smoothing: antialiased
-  font-family: $proximalight
-  color: $dark-gray
+	position: relative
+	font-size: 16px
+	line-height: 1.42
+	-webkit-font-smoothing: antialiased
+	font-family: $proximalight
+	color: $dark-gray
 
 ul
-  list-style: none
-  padding: 0  
-  margin: 0
+	list-style: none
+	padding: 0
+	margin: 0
 
-a 
-  text-decoration: none
+a
+	text-decoration: none
 
 h2
-  font: 30px/30px $pantonbold
-  +w768
-    font: 42px/42px $pantonbold
+	font: 30px/30px $pantonbold
+	+w768
+		font: 42px/42px $pantonbold
 
 h3
-  margin: 0
-  font: 21px/21px $pantonbold
+	margin: 0
+	font: 21px/21px $pantonbold
 
 h4
-  margin: 0
-  font: 14px/21px $pantonbold
-  +w768
-    font-size: 16px
-
+	margin: 0
+	font: 14px/21px $pantonbold
+	+w768
+		font-size: 16px
 
 p
-  font-size: 14px
-  line-height: 21px
-  margin: 10px 0
-  padding: 0
-  +w768
-    font-size: 16px
+	font-size: 14px
+	line-height: 21px
+	margin: 10px 0
+	padding: 0
+	+w768
+		font-size: 16px
 
 *
-  box-sizing: border-box
+	box-sizing: border-box
 
 button
-  outline: none
-  background-color: transparent
-  border: none
-  cursor: pointer
+	outline: none
+	background-color: transparent
+	border: none
+	padding: 0
+	cursor: pointer
 
 form
-  position: relative
+	position: relative
 
 .wrapper
-  position: relative
-  // overflow: hidden
-  min-width: 320px
-  min-height: 100%
-  height: auto!important
-  display: flex
-  flex-direction: column
-  justify-content: space-between
- 
-  // background-color: gray //убрать
+	position: relative
+	// overflow: hidden
+	min-width: 320px
+
+	min-height: 100%
+	height: auto !important
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+// background-color: gray //убрать
 
 .container
-  width: 100%
-  // height: 100%  
-  max-width: 1580px
-  min-width: 300px
-  padding: 0px 10px
-  margin: 0 auto
-  +w768
-    padding: 0px 20px
+	width: 100%
+	min-width: 300px
+	padding: 0 10px
+	margin: 0 auto
+	+w768
+		max-width: 760px
+		padding: 0 20px
+	+w1200
+		max-width: 1130px
+	+w1300
+		max-width: 1220px
+	+w1800
+		max-width: 1610px
 
 input,
 textarea
-  display: block
-  resize: none
-  border: none
-  outline: none
-  color: $dark-gray
-  font: 16px/16px $proximalight
-
+	display: block
+	resize: none
+	border: none
+	outline: none
+	color: $dark-gray
+	font: 16px/16px $proximalight
 
 // img
 //   width: 100%
 //   height: auto
 
-.main 
-  min-height: 1000px
-  padding: 20px 0
-  &_content
-    display: flex
-    flex-wrap: wrap
-  
+
 .error
-  background-color: $error
-  padding: 5px 10px
-  margin: 5px
+	background-color: $error
+	padding: 5px 10px
+	margin: 5px
 
 .hide
-  display: none
+	display: none
 
 .visible
-  display: block
+	display: block
 
 .fixed
-  position: fixed
-  top: 0
-  left: 0
+	position: fixed
+	top: 0
+	left: 0
 
 .overlay
-  position: absolute
-  top: 0
-  left: 0
-  +size(100%)
-  background-color: rgba(255,255,255,.9)
-  z-index: 3
+	min-width: 320
+	position: absolute
+	top: 0
+	left: 0
+	+size(100%)
+	background-color: rgba(255, 255, 255, .9)
+	z-index: 3
 
 .panel
-  &_list
-    min-width: 100px
-    max-width: 500px
-    margin: 0 auto
-    display: flex
-    align-items: center
-    justify-content: space-around
-  &_item
-    margin-right: 15px
-    &:last-child
-      margin-right: 0
-  &_link
-    position: relative
-    display: block
-    color: #000
-    font: 14px/20px $pantonbold
-    padding-left: 30px 
-  .btn_icon
-    position: absolute
-    top: 0
-    left: 0
-    +size(20px)
+	&_list
+		min-width: 100px
+		max-width: 500px
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+	&_item
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+	&_link
+		position: relative
+		display: block
+		color: #000
+		font: 14px/20px $pantonbold
+		padding-left: 30px
+	.btn_icon
+		position: absolute
+		top: 0
+		left: 0
+		+size(20px)
 
 .infoBlock
-  position: relative
-  width: 100%
-  margin: 0 auto
-  min-height: 56px
-  display: flex
-  flex-direction: column
-  align-items: center
-  +w768
-    flex-direction: row
-    justify-content: flex-start
+	position: relative
+	width: 100%
+	margin: 0 auto
+	min-height: 56px
+	display: flex
+	flex-direction: column
+	align-items: center
+	+w768
+		flex-direction: row
+		justify-content: flex-start
 
-  &_content
-    max-width: 400px
-    padding: 0 15px
-    overflow: hidden  
-    color: #fff
-    text-align: center
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    +w768
-      align-items: flex-start
-  .about
-    overflow: hidden
-    flex-direction: column
-    align-items: center
-    justify-content: space-around
-    +w768
-      text-align: left   
-  p
-    max-height: 80px
+	&_content
+		max-width: 400px
+		padding: 0 15px
+		overflow: hidden
+		color: #fff
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		+w768
+			align-items: flex-start
+	.about
+		overflow: hidden
+		flex-direction: column
+		align-items: center
+		justify-content: space-around
+		+w768
+			text-align: left
+	p
+		max-height: 80px
 
 .user_pic
-  +size(56px)
-  min-height: 56px
-  min-width: 56px
-  border-radius: 50%
-  border: 2px solid #fff
-  overflow: hidden
-  background-color: $light-gray
-  margin-bottom: 15px 
-  +w768
-    +size(100px)
-    min-height: 100px
-    min-width: 100px
-    margin-bottom: 0
+	+size(56px)
+	min-height: 56px
+	min-width: 56px
+	border-radius: 50%
+	border: 2px solid #fff
+	overflow: hidden
+	background-color: $light-gray
+	margin-bottom: 15px
+	img
+		+size(100% auto)
+	+w768
+		+size(100px)
+		min-height: 100px
+		min-width: 100px
+		margin-bottom: 0
 
 .infoBlock--min
-  height: 56px
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
-  .user_pic
-    margin: 0
-    +size(56px)
-    min-height: 56px
-    min-width: 56px
+	height: 56px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	.user_pic
+		margin: 0
+		+size(56px)
+		min-height: 56px
+		min-width: 56px

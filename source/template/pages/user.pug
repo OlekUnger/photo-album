@@ -1,13 +1,14 @@
 extends ../_template
 
 block title
-  title User
+	title User
 
 block variables
-  -var title='User'
+	-var title='User'
+	-var main_title='Альбомы'
 
 block content
-  .wrapper
-    include ../blocks/header
-    main.main
-    include ../blocks/footer
+	.wrapper
+		include ../blocks/header
+		include ../blocks/main-content
+		include ../blocks/footer

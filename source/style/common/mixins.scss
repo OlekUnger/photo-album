@@ -90,6 +90,12 @@
   }
 }
 
+@mixin w1300 {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin w1800 {
   @media screen and (min-width: 1800px) {
     @content;

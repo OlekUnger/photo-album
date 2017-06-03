@@ -1,0 +1,196 @@
+.main
+	width: 100%
+	padding: 20px 0
+	.content_wrap
+		width: 300px
+		margin: 0 auto
+		+w768
+			width: 720px
+		+w1200
+			width: 1090px
+		+w1300
+			width: 1180px
+		+w1800
+			width: 1580px
+
+	&_content
+		position: relative
+		margin-left: -10px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		+w768
+			margin-left: -20px
+			justify-content: flex-start
+		.add-btn
+			position: absolute
+			top: -20px
+			right: 0
+			z-index: 6
+			+w768
+				top: -45px
+
+	&_title
+		text-align: center
+		+w768
+			text-align: left
+
+.item
+	margin: 0 5px 10px
+	border-radius: 3px
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .15)
+	overflow: hidden
+	width: 300px
+	+w768
+		width: 348px
+		margin: 0 0 20px 20px
+	+w1300
+		width: 380px
+	
+		
+	&_photo
+		+size(100% 200px)
+		display: block
+		position: relative
+		overflow: hidden
+		background-color: $light-gray	
+		+w768
+			height: 230px
+		+w1300
+			height: 250px
+		&:hover
+			.item_overlay
+				opacity: 1
+		+w768
+			height: 230px
+
+	&_footer
+		+size(100% 50px)
+		display: flex
+		align-items: center
+
+	&_overlay
+		+size(100%)
+		position: absolute
+		bottom: 0
+		left: 0
+		opacity: 0
+		z-index: 1
+		transition: all .2s ease-in-out
+		background: linear-gradient(to bottom, rgba(0, 0, 0, .21) 0%, rgba(0, 0, 0, .63) 100%)
+		.btn_icon
+			position: absolute
+			+size(40px)
+			fill: #fff
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	&_title
+		+text-ellipsis
+		font: 14px/21px $proximaemibold
+		color: $dark-gray
+
+	.btn
+		&:hover
+			.btn_icon
+				fill: $gray
+
+	.panel
+		&_link
+			color: $dark-gray
+			font: 16px/24px $pantonbold
+			font-weight: 500
+			&:hover
+				.btn_icon
+					fill: $blue
+
+	.photo_title
+		+text-ellipsis
+		font: 14px/21px $proximalight
+		+w768
+			font: 16px/21px $proximalight
+
+	.edit-btn
+		.btn 
+			+size(20px)
+			font-size: 0
+		.btn_icon
+			top: 0
+			left: 0
+
+// main-page
+
+.item--main
+	.item
+		&_footer
+			+size(100% 40px)
+			background-color: $much-light
+			justify-content: flex-end
+
+		&_header
+			+size(100% 70px)
+			display: flex
+			align-items: center
+			+w768
+				height: 90px
+
+		&_title
+			padding-left: 30px
+			.btn_icon
+				top: 0
+				left: 0
+
+	.infoBlock--min
+		align-items: center
+
+	.infoBlock_content
+		height: 100%
+		align-items: flex-start
+		justify-content: space-between
+		color: $dark-gray
+
+// album-page
+.item--album
+	
+	.item
+		&_footer
+			justify-content: space-between
+
+	.panel
+		position: absolute
+		bottom: 20px
+		left: 20px
+		z-index: 2
+		&_link
+			color: #fff
+			&:hover
+		.btn_icon
+			fill: rgba(255, 255, 255, .9)
+
+//user-page
+
+.item--user
+	width: 300px
+	+w768
+		max-width: 224px
+		// margin-left: 24px
+	+w1300
+		max-width: 280px
+	+w1800
+		max-width: 300px
+
+	.item
+		&_footer
+			justify-content: space-between
+		&_photo
+			height: 300px
+			+w768
+				height: 224px
+			+w1300
+				height: 280px
+			+w1800
+				height: 300px
+
+	.btn
+		display: none
