@@ -1,0 +1,40 @@
+.popup--edit-header
+  .edit-header_content.container
+    .user_pic
+      button.btn.btn--upload.edit-btn
+        svg.btn_icon
+          use(xlink:href="assets/img/sprite.svg#cam")
+        | Изменить фон
+      img
+
+    .form_content
+      .form_item
+        +input('input','text','user-name','user-name','Имя Фамилия','','')
+      .form_item
+        +input('textarea','text','user-text','user-text','О себе','','')
+      
+      .socials
+        ul(class="socials_list")
+          +icon("socials","vk", "a", "assets/img/sprite.svg#soc_vk")
+          +icon("socials","facebook", "b", "assets/img/sprite.svg#soc_fb")
+          +icon("socials","twitter", "c", "assets/img/sprite.svg#soc_twitter")
+          +icon("socials","google", "d", "assets/img/sprite.svg#social_google")
+          +icon("socials","email", "e", "assets/img/sprite.svg#soc_email")
+
+        .popup--edit-socials.popup.hide
+          .form_item
+            +input('input','text','','','ссылка','','')
+          .form_footer
+            +button('btn btn--bordered save-btn','Сохранить','')
+            +button('btn btn--transparent reset-btn','Отменить', '')
+            
+
+    
+    button.btn.btn--upload.edit-btn
+      svg.btn_icon
+          use(xlink:href="assets/img/sprite.svg#cam")
+      | Изменить фон
+
+  .form_footer.container
+    +button('btn btn--transparent reset-btn','Отменить', '')
+    +button('btn btn--colored save','Сохранить', '')

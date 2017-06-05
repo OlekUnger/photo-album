@@ -1,0 +1,121 @@
+[class*=popup--]:not(.popup--edit-header)
+  border-radius: 3px
+  overflow: hidden
+
+.popup
+
+  &_content
+    width: 100%
+    padding: 15px 0
+    background-color: #FFF
+    display: flex
+    flex-direction: column
+
+  &_header,
+  &_footer
+    +size(100% 70px)
+    background-color: $much-light
+    display: flex
+    align-items: center
+  .close-btn
+    font-size: 0
+    +size(21px)
+    &:hover
+      .btn_icon
+        fill: $gray
+
+
+.popup--notice
+  width: 280px
+  .close-btn
+    background-color: transparent
+    margin: 0 auto
+
+// edit-profile----
+
+.popup--edit-profile
+  +size(300px auto)
+  margin: 0 auto
+  transform: translateY(50px)
+  background-color: #FFF
+  +w768
+    width: 600px
+  .form_content
+    padding-top: 10px
+  .form_item
+    border: 1px solid $light-gray
+    margin-bottom: 10px
+  input
+    padding-left: 0
+  .popup
+    &_header
+      justify-content: space-between
+
+.popup--edit-socials
+  +size(280px 110px)
+  position: absolute
+  padding: 10px
+  background-color: #FFF
+  bottom: -120px
+  left: -81px
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15)
+  z-index: 5
+  .form_item
+    border: 1px solid $gray
+  .form_footer
+    justify-content: flex-start !important
+    height: auto
+
+.popup--edit-header
+  margin: 0 auto
+  // display: flex
+  // flex-direction: column
+  width: 100%
+  // min-width: 300px
+  // max-width: 1300px
+ 
+.edit-header_content
+  position: relative
+  
+  min-height: 240px
+  padding-top: 20px
+  padding-bottom: 20px
+  background-color: #ccc
+  display: flex
+  flex-direction: column
+  align-items: center
+  +w768
+    flex-direction: row
+    justify-content: space-around
+
+  .form_item
+    margin-bottom: 10px
+  input
+    padding-left: 0
+  .form_content
+    align-items: center
+    padding-bottom: 20px
+    max-width: 480px
+    +w768
+      align-items: flex-start
+  .form_footer
+    background-color: transparent
+
+  .btn--upload
+    padding: 15px
+    color: #fff
+    font: 12px/20px $proximaemibold
+    &:hover
+      color: $blue
+      .btn_icon
+        fill: $blue
+    .btn_icon
+      fill: #fff
+
+  .user_pic
+    .btn--upload
+      display: none
+      +w768
+        display: block
+  
+  

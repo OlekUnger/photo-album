@@ -29,15 +29,15 @@ mixin link(className,text,href,icon)
      
 
 mixin input(tag,type,id,name,placeholder,value,icon)
-  .form_item
-    if tag=='input'
-      input(type=type id=id name=name placeholder=placeholder value=value)
-    if tag=='textarea'
-      textarea(rows='3' id=id name=name placeholder=placeholder)=value
-    if icon!=''
-      label(for id=id)
-        svg.form_icon
-          use(xlink:href=icon)
+  
+  if tag=='input'
+    input(type=type id=id name=name placeholder=placeholder value=value)
+  if tag=='textarea'
+    textarea(rows='3' id=id name=name placeholder=placeholder)=value
+  if icon!=''
+    label(for id=id)
+      svg.form_icon
+        use(xlink:href=icon)
   
 
 mixin socials

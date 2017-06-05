@@ -1,0 +1,12 @@
+extends ../_template
+
+block content
+  .btnWrapper
+    .btnItem
+      h4 popup--notice
+      .popup.popup--notice
+        .popup_content
+          p.notice Файлы были загружены
+        .popup_footer
+          +button('btn btn--bordered close-btn', 'Закрыть','')
+

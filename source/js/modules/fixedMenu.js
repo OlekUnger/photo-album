@@ -1,7 +1,7 @@
 fixedMenu =(function(){
   var headerBottom = $('.header_bottom'),
       headerBottomFixed = $('.header_bottom--fixed'),
-      albumPanel = $('.panel'),
+      albumPanel = $('.header .panel'),
       height = headerBottom.offset().top;
   
   var init = function(){
@@ -35,3 +35,5 @@ fixedMenu =(function(){
   };
 
 })();
+
+fixedMenu.init();

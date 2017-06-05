@@ -23,3 +23,5 @@ smoothScroll =(function(){
 
 })();
 
+smoothScroll.init();
+

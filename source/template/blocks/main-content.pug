@@ -1,90 +1,70 @@
 main.main
 
-	//- if title=='Search'
-	//- 	.container
-	//- 		h2.main_title #{main_title}
-	//- 	.header_bottom
-	//- 		.container
-	//- 			.header_bottom--search
-	//- 				.fixedItem
-	//- 					.infoBlock--min
-	//- 						a(href="album.html").user_pic
-	//- 							img(src="assets/img/user-pic1.jpg")
-	//- 						.infoBlock_content
-	//- 							h4 Имя Фамилия
+	.container
+		.content_wrap
+			h2.main_title 
+				if title!='Search'
+					| #{main_title}
+				else
+					p.notice
+						| По запросу &laquo;  &raquo; найдено 0 результатов
 
-	//- 				.fixedItem
-	//- 					form.search-form
-	//- 						.form_item
-	//- 							input(name="search" type="text" placeholder="Исследовать мир" id="search")
-	//- 							label(for="search")
-	//- 								svg.form_icon
-	//- 									use(xlink:href="assets/img/sprite.svg#loupe")
-	//- 				.fixedItem
-	//- 					+button('search-new','Показать новые','')
-						
+			.main_content
+				if title =='Album'
+					+button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
+				
+				- for(var i=0; i<10; i++)
 
-	if title!='Search'
-		.container
-			.content_wrap
-				h2.main_title #{main_title}
+					if title == "main" || title=='Search'
+						article.item.item--main
+							.item_photo
+								+link('item_overlay','','#','assets/img/sprite.svg#loupe')
+								img(src="assets/img/album-pic-1.jpg")
 
-				.main_content
-					if title =='Album'
-						+button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
-					
-					- for(var i=0; i<10; i++)
-
-						if title == "main"
-							article.item.item--main
-								.item_photo
-									+link('item_overlay','','#','assets/img/sprite.svg#loupe')
-									img(src="assets/img/album-pic-1.jpg")
-
-								.item_header.container
-									.infoBlock--min
-										.user_pic
-											img(src="assets/img/user-pic1.jpg")
-										.infoBlock_content
-											span.photo_title Название фотографии
-
-											-var panel_list=[{'text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
-											.panel
-												ul.panel_list
-													each item in panel_list
-														li.panel_item
-															+button('panel_link',item.count, item.icon)
-
-								.item_footer.container
-									+link('btn item_title','Заголовок альбома','album.html','assets/img/sprite.svg#album')
-
-
-						if title == "Album"
-							- for(var i=0; i<10; i++)
-								article.item.item--album
-									.item_photo
-										+link('item_overlay','','#','assets/img/sprite.svg#loupe')
+							.item_header.container
+								.infoBlock--min
+									.user_pic
+										img(src="assets/img/user-pic1.jpg")
+									.infoBlock_content
+										span.photo_title Название фотографии
 
 										-var panel_list=[{'text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
 										.panel
 											ul.panel_list
 												each item in panel_list
 													li.panel_item
-														+button('panel_link', item.count, item.icon)
+														+button('panel_link',item.count, item.icon)
 
-										img(src="assets/img/album-pic-1.jpg")
-									.item_footer.container
-										.edit-btn
-											+button('btn','Редактировать','assets/img/sprite.svg#edit')
-										span.photo_title Заголовок фотографии
+							.item_footer.container
+								+link('btn item_title','Заголовок альбома','album.html','assets/img/sprite.svg#album')
 
 
-						if title == "User"
-							article.item.item--user
+					if title == "Album"
+						- for(var i=0; i<10; i++)
+							article.item.item--album
 								.item_photo
+									+link('item_overlay','','#','assets/img/sprite.svg#loupe')
+
+									-var panel_list=[{'text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
+									.panel
+										ul.panel_list
+											each item in panel_list
+												li.panel_item
+													+button('panel_link', item.count, item.icon)
+
 									img(src="assets/img/album-pic-1.jpg")
 								.item_footer.container
 									.edit-btn
 										+button('btn','Редактировать','assets/img/sprite.svg#edit')
-									span.item_title Заголовок альбома
+									span.photo_title Заголовок фотографии
+
+
+					if title == "User"
+						article.item.item--user
+							.item_photo
+								img(src="assets/img/album-pic-1.jpg")
+							.item_footer.container
+								.edit-btn
+									+button('btn','Редактировать','assets/img/sprite.svg#edit')
+								span.item_title Заголовок альбома
 

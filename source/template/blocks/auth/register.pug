@@ -4,11 +4,14 @@
     h2 Регистрация
   
   form.auth-form
-    +input('input','text','name','name','Имя','','assets/img/sprite.svg#name')
-    +input('input','email','email','email','Электронная почта','','assets/img/sprite.svg#envelope')
-    +input('input','password','password','password','Пароль','','assets/img/sprite.svg#password')
+    .form_item
+      +input('input','text','name','name','Имя','','assets/img/sprite.svg#name')
+    .form_item
+      +input('input','email','email','email','Электронная почта','','assets/img/sprite.svg#envelope')
+    .form_item
+      +input('input','password','password','password','Пароль','','assets/img/sprite.svg#password')
 
-    .form_content
+    .form_content.container
       p
        |Ваши данные останутся строго конфиденциальны
 

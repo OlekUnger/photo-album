@@ -73,7 +73,7 @@
 }
 
 @mixin w998 {
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 998px) {
     @content;
   }
 }
@@ -91,7 +91,7 @@
 }
 
 @mixin w1300 {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1300px) {
     @content;
   }
 }

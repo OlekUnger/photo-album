@@ -1,0 +1,18 @@
+.popup--edit-profile
+  .popup_header.container
+    h3 Редактировать профиль
+    +button('btn close-btn', 'Закрыть','assets/img/sprite.svg#close')
+  .container
+    .popup_content
+      label Имя
+      .form_item
+        +input('input','text','user_name','user_name','Имя','','')
+      .form_item
+        +input('input','text','user_last-name','user_last-name','Фамилия','','')
+    .popup_content
+      label О себе
+      .form_item
+        +input('textarea','text','user-text','user-text','О себе','','')
+  .popup_footer.container
+    +button('btn btn--colored save-btn','Сохранить', '')
+    +button('btn btn--transparent reset-btn','Отменить', '')

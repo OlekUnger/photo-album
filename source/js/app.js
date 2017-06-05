@@ -1,10 +1,10 @@
-auth.init();
+// auth.init();
 
-fixedMenu.init();
+// fixedMenu.init();
 
-smoothScroll.init();
+// smoothScroll.init();
 
-showPopups.init();
+// showPopups.init();
 
 
 

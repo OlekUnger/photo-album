@@ -59,6 +59,9 @@ button
 form
 	position: relative
 
+label
+	font: 14px/21px $proximaemibold
+
 .wrapper
 	position: relative
 	// overflow: hidden
@@ -106,6 +109,12 @@ textarea
 	padding: 5px 10px
 	margin: 5px
 
+.notice
+	color: $dark-gray
+	font: 16px/21px $proximaemibold
+	// +w768
+	// 	font: 21px/25px $proximaemibold
+
 .hide
 	display: none
 
@@ -123,8 +132,12 @@ textarea
 	top: 0
 	left: 0
 	+size(100%)
-	background-color: rgba(255, 255, 255, .9)
-	z-index: 3
+	// background-color: rgba(255, 255, 255, .9)
+	background-color: rgba(0,0,0,.9)
+	z-index: 6
+
+.overlay--dark
+	background-color: rgba(0,0,0,.9)
 
 .panel
 	&_list

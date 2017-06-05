@@ -7,6 +7,8 @@
 	border-radius: 20px
 	input
 		width: 100%
+    // display: block
+    border-radius: 20px
 		padding: 0 10px 0 25px
 		order: 2
 		&:focus ~ label > .form_icon
@@ -22,10 +24,9 @@
 	display: flex
 	flex-direction: column
 
-.form_bottom
+.form_footer
 	height: 60px
-	max-width: 1300px
-	background: transparent
+	background-color: transparent
 	display: flex
 	align-items: center
 	justify-content: flex-end
@@ -33,77 +34,94 @@
 // поиск
 
 .search-form
-	min-width: 200px
-	max-width: 300px
-	height: 100%
-	// +size(300px 100%)
-	padding: 10px 0
-	margin: 0 auto
-	+w768
-		float: right
-	+w998
-		min-width: 380px
+  min-width: 200px
+  max-width: 300px
+  height: 100%
+  display: block
+  padding: 10px 0
+  margin: 0 auto
+  +w768
+  	float: right
+  	width: 300px
+  +w998
+  	width: 380px
+
+// формы регистрации, входа восстановления пароля
+
+.authWrapper
+  width: 300px
+  margin: 0 auto
+  padding: 60px 0 
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  @include w768
+    width: 560px
+
+.authWrapper.hide
+  display: none;
+ 
+.authHeader
+  padding: 0 10px
+  color: #fff
+  margin-bottom: 25px
+  h2
+    margin: 15px 0
+  p
+    margin: 10px 0  
+
+
+.auth-form
+  position: relative
+  width: 300px
+  background-color: #FFF
+  border-radius: 20px
+  margin: 0 auto
+  overflow: hidden
+
+  .btn--colored
+    margin: 10px 0
+    width: 100%
+
+  .form_item
+    border-radius: 0
+    border-bottom: 1px solid $light-gray
+
+  .form_content
+    text-align: left
+    p
+      font: 14px/21px $proximalight    
+
+span.do-enter,
+span.do-resetPassword
+  color: $blue
+  margin-left: 10px
+  font-family: $proximaemibold
+  cursor: pointer
+  &:hover
+    color: $blue-hover
+
+.form_icon
+  width: 100%
+  max-height: 20px
+  fill: $light-gray
+
+// .hide
+//   display: none
+  
+// .visible
+//   display: block
+
+.get-resetPassword
+  .form_item
+    border-top: 1px solid $light-gray
+
 
 // редактирование шапки и профиля
 
-.editHeader-form
-	position: relative
-	width: 100%
-	min-width: 300px
-	max-width: 1300px
-	min-height: 240px
-	padding-top: 20px
-	padding-bottom: 20px
-	background-color: #ccc
-	display: flex
-	flex-direction: column
-	align-items: center
-	+w768
-		flex-direction: row
-		justify-content: space-around
 
-	.form_item
-		margin-bottom: 10px
-	input
-		padding-left: 0
-	.form_content
-		align-items: center
-		padding-bottom: 20px
-		max-width: 480px
-		+w768
-			align-items: flex-start
-
-	.btn--upload
-		margin-top: 10px
-		color: #fff
-		font: 12px/20px $proximaemibold
-		&:hover
-			color: $blue
-			.btn_icon
-				fill: $blue
-		.btn_icon
-			fill: #fff
-
-	.user_pic
-		.btn--upload
-			display: none
-			+w768
-				display: block
-
-.simple-form
-	+size(280px 110px)
-	position: absolute
-	padding: 10px
-	background-color: #FFF
-	bottom: -120px
-	left: -81px
-	box-shadow: 0 1px 4px rgba(0, 0, 0, .15)
-	z-index: 5
-	.form_item
-		border: 1px solid $gray
-	.form_bottom
-		justify-content: flex-start !important
-		height: auto
 
 
 

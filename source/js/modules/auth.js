@@ -16,11 +16,11 @@ auth = (function(){
     if($('.get-resetPassword').hasClass('hide')){
       $('.get-register, .get-login').toggleClass("hide");
    
-    }else if($('.getregister').hasClass('hide')) {
+    }else if($('.get-register').hasClass('hide')) {
       $('.get-resetPassword, .get-login' ).toggleClass("hide");
 
     } else {
-      $('.getregister, .get-login').toggleClass("hide");
+      $('.get-register, .get-login').toggleClass("hide");
     }
    
   };
@@ -36,3 +36,5 @@ auth = (function(){
   };
 
 })();
+
+auth.init();

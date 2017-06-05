@@ -3,7 +3,7 @@ mixin actionBtns_list
 		ul.actionBtns_list
 			if title == 'main'
 				li.actionBtns_item
-					+button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
+					+button("btn btn--slidered edit-btn","Редактировать","assets/img/sprite.svg#edit")
 				li.actionBtns_item
 					+button("btn btn--slidered","Выйти","assets/img/sprite.svg#off")
 			if title == 'User'
@@ -13,15 +13,16 @@ mixin actionBtns_list
 				li.actionBtns_item
 					+link("btn btn--slidered","На главную", "main.html","assets/img/sprite.svg#home")
 				li.actionBtns_item
-					+button("btn btn--slidered editHeader-btn","Редактировать","assets/img/sprite.svg#edit")
+					+button("btn btn--slidered edit-btn","Редактировать","assets/img/sprite.svg#edit")
 
-if title=='Search'
+if title =='Search'
 	.header--search
 		.container
 			h2.main_title #{main_title}
 		.header_bottom
 			.container
 				.header_bottom--search
+					
 					.fixedItem
 						.infoBlock--min
 							a(href="album.html").user_pic
@@ -67,6 +68,7 @@ if title!='Search'
 							label(for="search")
 								svg.form_icon
 									use(xlink:href="assets/img/sprite.svg#loupe")
+
 
 		//- Album-page
 
