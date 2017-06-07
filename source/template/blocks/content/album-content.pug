@@ -1,0 +1,18 @@
++button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
+- for(var i=0; i<6; i++)
+  article.item.item--album
+    .item_photo
+      +link('item_overlay','','#','assets/img/sprite.svg#loupe')
+
+      -var panel_list=[{'text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
+      .panel
+        ul.panel_list
+          each item in panel_list
+            li.panel_item
+              +button('panel_link', item.count, item.icon)
+
+      img(src="assets/img/album-pic-1.jpg")
+    .item_footer
+      .edit-btn
+        +button('btn','Редактировать','assets/img/sprite.svg#edit')
+      span.photo_title Заголовок фотографии

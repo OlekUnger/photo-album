@@ -13,7 +13,7 @@ main.main
 				if title =='Album'
 					+button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
 				
-				- for(var i=0; i<10; i++)
+				- for(var i=0; i<6; i++)
 
 					if title == "main" || title=='Search'
 						article.item.item--main
@@ -40,7 +40,7 @@ main.main
 
 
 					if title == "Album"
-						- for(var i=0; i<10; i++)
+						- for(var i=0; i<6; i++)
 							article.item.item--album
 								.item_photo
 									+link('item_overlay','','#','assets/img/sprite.svg#loupe')
@@ -68,3 +68,19 @@ main.main
 									+button('btn','Редактировать','assets/img/sprite.svg#edit')
 								span.item_title Заголовок альбома
 
+if title=='main'
+	main.main
+
+		.container
+			.content_wrap
+				h2.main_title
+					| #{main_title[1]}
+				.main_content
+					- for(var i=0; i<6; i++)
+						article.item.item--user
+							.item_photo
+								img(src="assets/img/album-pic-1.jpg")
+							.item_footer.container
+								.edit-btn
+									+button('btn','Редактировать','assets/img/sprite.svg#edit')
+								span.item_title Заголовок альбома

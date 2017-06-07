@@ -5,10 +5,19 @@ block title
 
 block variables
 	- var title ='Album'
+	- var main_title =''
   
 
 block content
 	.wrapper
 		include ../blocks/header
-		include ../blocks/main-content
+
+		main.main
+			.container
+				.content_wrap
+					h2.main_title 
+						| #{main_title}
+					.main_content
+						include ../blocks/content/album-content
+		
 		include ../blocks/footer

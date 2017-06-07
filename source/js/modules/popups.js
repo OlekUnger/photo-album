@@ -24,13 +24,13 @@ editHeader =(function(){
     
     var _togglePopup = function(e){
         e.preventDefault();
-        toggle($(this).closest('.popup'));   
+        $(this).closest('.popup').toggleClass('hide');   
     };
 
 
     _editHeader = function(){
-        hide(popup_socials);
-        show('.overlay');
+        popup_socials.addClass('hide');
+        $('.overlay').removeClass('hide');
     };
 
     _editSocial = function(e){
@@ -39,7 +39,7 @@ editHeader =(function(){
             text = popup_socials.find('input').val();
 
         $(this).parent(socialItem).addClass('active').siblings().removeClass('active');
-        show(popup_socials);
+        popup_socials.removeClass('hide');
         popup_socials.find('input').val(socialLinkText);
 
     };

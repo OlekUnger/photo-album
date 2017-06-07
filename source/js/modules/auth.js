@@ -15,20 +15,20 @@ auth = (function(){
     e.preventDefault();
     
     if($('.get-resetPassword').hasClass('hide')){
-      toggle('.get-register, .get-login');
+      $('.get-register, .get-login').toggleClass('hide');
    
     } else if ($('.get-register').hasClass('hide')) { 
-      toggle('.get-resetPassword, .get-login');
+      $('.get-resetPassword, .get-login').toggleClass('hide');
 
     } else {
-      toggle('.get-register, .get-login');
+      $('.get-register, .get-login').toggleClass('hide');
     }
    
   };
 
   _showRegisterForm = function(e){
     e.preventDefault();
-    toggle('.get-resetPassword, .get-login');
+    $('.get-resetPassword, .get-login').toggleClass('hide');
   };
 
   _validate = function(e){
@@ -48,7 +48,7 @@ auth = (function(){
     });
 
     if(errors!=false){
-      $('span.error').show().text('Заполните '+errors[0]);
+      $('span.error').show().text('Заполните: '+errors[0]);
     } else { 
       $('span.error').hide();
       $('span.success').show().text('Успешно');

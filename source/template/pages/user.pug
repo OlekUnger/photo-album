@@ -10,5 +10,13 @@ block variables
 block content
 	.wrapper
 		include ../blocks/header
-		include ../blocks/main-content
+
+		main.main
+			.container
+				.content_wrap
+					h2.main_title
+						| #{main_title}
+					.main_content
+						include ../blocks/content/user-content
+						
 		include ../blocks/footer

@@ -26,7 +26,7 @@
 			position: absolute
 			top: -20px
 			right: 0
-			z-index: 6
+			z-index: 3
 			+w768
 				top: -45px
 
@@ -34,6 +34,8 @@
 		text-align: center
 		+w768
 			text-align: left
+.main--second
+	background-color: $much-light
 
 .item
 	margin: 0 5px 10px
@@ -68,6 +70,9 @@
 		+size(100% 50px)
 		display: flex
 		align-items: center
+		padding: 0 10px
+		+w768
+			padding: 0 20px
 
 	&_overlay
 		+size(100%)
@@ -174,7 +179,6 @@
 	width: 300px
 	+w768
 		max-width: 224px
-		// margin-left: 24px
 	+w1300
 		max-width: 280px
 	+w1800
@@ -193,4 +197,4 @@
 				height: 300px
 
 	.btn
-		display: none
+		// display: none

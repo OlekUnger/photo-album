@@ -1,0 +1,24 @@
+
+- for(var i=0; i<6; i++)
+  article.item.item--main
+    .item_photo
+      +link('item_overlay','','#','assets/img/sprite.svg#loupe')
+      img(src="assets/img/album-pic-1.jpg")
+
+    .item_header.container
+      .infoBlock--min
+        .user_pic
+          img(src="assets/img/user-pic1.jpg")
+        .infoBlock_content
+          span.photo_title Название фотографии
+
+          -var panel_list=[{'text': 'Комментариев','count': '0','icon':'assets/img/sprite.svg#comments'},{'text': 'Лайков', 'count': '0','icon':'assets/img/sprite.svg#like'}]
+          .panel
+            ul.panel_list
+              each item in panel_list
+                li.panel_item
+                  +button('panel_link',item.count, item.icon)
+
+    .item_footer.container
+      +link('btn item_title','Заголовок альбома','album.html','assets/img/sprite.svg#album')
+

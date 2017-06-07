@@ -1,16 +1,4 @@
 
-var toggle = function(item){
-    $(item).toggleClass('hide'); 
-};
-
-var hide = function(item){
-    $(item).addClass('hide');
-};
-
-var show = function(item){
-    $(item).removeClass('hide');
-};
-
 auth.init();
 editHeader.init();
 
