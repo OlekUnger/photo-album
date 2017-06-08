@@ -37,6 +37,7 @@
       max-width: 250px
       flex-direction: column
       align-items: flex-end
+      justify-content: flex-start
   &_item
     margin-bottom: 10px
 
@@ -46,6 +47,7 @@
 .header_content--album
   position: relative
   min-height: 220px
+
   .actionBtns_list
     max-width: 250px
     flex-direction: column
@@ -109,10 +111,12 @@
   justify-content: space-around
   +w768
      justify-content: space-between
+
   .search-new
     margin-left: 5px
     color: $blue
     font: 16px/21px $proximaemibold
+
   .fixedItem:nth-child(1)
     display: none
     +w768

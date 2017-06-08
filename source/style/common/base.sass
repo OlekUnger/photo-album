@@ -1,6 +1,7 @@
 // styles
 html
 	font-size: 10px
+	min-height: 100%
 
 html,
 body
@@ -95,6 +96,7 @@ main
 
 input,
 textarea
+	width: 100%
 	display: block
 	resize: none
 	border: none
@@ -148,6 +150,7 @@ textarea
 	z-index: 6
 
 .overlay--dark
+	@extend .overlay
 	background-color: rgba(0,0,0,.9)
 
 .panel

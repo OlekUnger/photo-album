@@ -2,10 +2,11 @@
 +button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
 
 - for(var i=0; i<6; i++)
-  article.item.item--user
-    .item_photo
+  article.item.item--album
+    a(href="#").item_photo
+      .item_overlay
       img(src="assets/img/album-pic-1.jpg")
     .item_footer
       .edit-btn
-        +button('btn','Редактировать','assets/img/sprite.svg#edit')
+      //-   +button('btn','Редактировать','assets/img/sprite.svg#edit')
       span.item_title Заголовок альбома

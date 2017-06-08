@@ -4,6 +4,7 @@
   background-color: gray
   background-image: url("../img/main-bg2000.jpg")
   background-position: 50% 90%
+
   &_content
     display: flex
     flex-direction: column
@@ -13,6 +14,7 @@
       flex-direction: row
       align-items: flex-start
       justify-content: space-between
+
   &_item
     width: 100%
     text-align: center
@@ -23,9 +25,11 @@
       width: 40%
     +w1800
       width: 30%
+
   &_item:first-child
     +w768
       text-align: left
+      
   &_item:last-child
     +w768
       text-align: right

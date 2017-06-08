@@ -11,15 +11,21 @@
       .form_item
         +input('input','text','user-name','user-name','Имя Фамилия','','')
       .form_item
-        +input('textarea','text','user-text','user-text','О себе','','')
-      
-      .socials
-        ul(class="socials_list")
-          +icon("socials","vk", "a", "assets/img/sprite.svg#soc_vk")
-          +icon("socials","facebook", "b", "assets/img/sprite.svg#soc_fb")
-          +icon("socials","twitter", "c", "assets/img/sprite.svg#soc_twitter")
-          +icon("socials","google", "d", "assets/img/sprite.svg#social_google")
-          +icon("socials","email", "e", "assets/img/sprite.svg#soc_email")
+
+        if title=='main'
+          +input('textarea','text','user_text','user_text','О себе','','')
+
+        if title=='Album'
+          +input('textarea','text','album_text','album_text','описание альбома','','')
+
+      if title == 'main'   
+        .socials
+          ul(class="socials_list")
+            +icon("socials","vk", "a", "assets/img/sprite.svg#soc_vk")
+            +icon("socials","facebook", "b", "assets/img/sprite.svg#soc_fb")
+            +icon("socials","twitter", "c", "assets/img/sprite.svg#soc_twitter")
+            +icon("socials","google", "d", "assets/img/sprite.svg#social_google")
+            +icon("socials","email", "e", "assets/img/sprite.svg#soc_email")
 
         .popup--edit-socials.popup
           .form_item

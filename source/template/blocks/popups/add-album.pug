@@ -1,0 +1,20 @@
+.popup--add-album
+  .popup_header.container
+    h3 Добавить альбом
+    +button('btn close-btn', 'Закрыть','assets/img/sprite.svg#close')
+  .container
+    .popup_content
+      
+      .popup_item
+        label Название
+        +input('input','text','album_name','album_name','Название альбома','','')
+    
+      .popup_item
+        label Описание
+        +input('textarea','text','album_text','album_text','Описание альбома','','')
+    
+      +button('btn btn--bordered','Загрузить обложку','')
+
+  .popup_footer.container
+    +button('btn btn--colored save-btn','Сохранить', '')
+    +button('btn btn--transparent reset-btn','Отменить', '')

@@ -11,26 +11,13 @@ block variables
 block content
   .wrapper
     include ../blocks/header
-    //- include ../blocks/content
-
-    main.main
-      .container
-        .content_wrap
-          h2.main_title 
-            | #{main_title[0]}
-          .main_content
-            include ../blocks/content/main-content
-    main.main.main--second
-      .container
-        .content_wrap
-          h2.main_title 
-            | #{main_title[1]}
-          .main_content
-            include ../blocks/content/user-content
-
+    include ../blocks/content
     include ../blocks/footer
 
-  .overlay.popup.hide
-    include ../blocks/popups/edit-header
-    //- include ../blocks/popups/edit-profile
+    .overlay.popup.hide
+      include ../blocks/popups/edit-header
+      
+    .overlay--dark.hide.popup
+      include ../blocks/popups/add-album
+      //- include ../blocks/popups/edit-profile
 

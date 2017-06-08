@@ -6,6 +6,7 @@ editHeader =(function(){
 
         edit_btn=$('.edit-btn'),
         close_btn=$('.close-btn'),
+        add_btn=$('.add-btn'),
         reset_btn=$('.reset-btn');
    
     var init = function(){
@@ -18,6 +19,7 @@ editHeader =(function(){
         socialLink.on('click', _editSocial);
         close_btn.on('click', _togglePopup);
         reset_btn.on('click', _togglePopup);
+        add_btn.on('click', _addAlbum);
 
     };
 
@@ -43,6 +45,10 @@ editHeader =(function(){
         popup_socials.find('input').val(socialLinkText);
 
     };
+
+    _addAlbum = function(){
+        $('.overlay--dark').removeClass('hide');   
+    }
 
 
     return {
