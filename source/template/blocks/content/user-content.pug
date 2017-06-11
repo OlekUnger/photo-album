@@ -5,8 +5,12 @@
   article.item.item--album
     a(href="#").item_photo
       .item_overlay
+        .item_description 
+          p.album_text Описание альбома
+          p.photo-count 0 Фотографий
+
       img(src="assets/img/album-pic-1.jpg")
     .item_footer
       .edit-btn
-      //-   +button('btn','Редактировать','assets/img/sprite.svg#edit')
-      span.item_title Заголовок альбома
+        +button('btn edit-popup_btn','Редактировать','assets/img/sprite.svg#edit')
+      a(href="album.html").item_title Заголовок альбома

@@ -39,8 +39,9 @@
 		text-align: center
 		+w768
 			text-align: left
-.main--second
-	background-color: $much-light
+
+	.show-more_btn
+		margin: 0 auto
 
 .item
 	margin: 0 5px 10px
@@ -82,6 +83,7 @@
 	&_overlay
 		+size(100%)
 		position: absolute
+		padding: 35px 20px
 		bottom: 0
 		left: 0
 		opacity: 0
@@ -98,9 +100,16 @@
 			transform: translate(-50%, -50%)
 
 	&_title
-		+text-ellipsis
 		font: 14px/21px $proximaemibold
 		color: $dark-gray
+
+	&_description
+		color: #fff
+		font: 16px/24px $proximalight
+		.album_text
+			font-weight: 300
+		.photo-count
+			font-weight: 600
 
 	.btn
 		&:hover
@@ -185,6 +194,8 @@
 	width: 300px
 	+w768
 		max-width: 224px
+	+w1200
+		max-width: 257px
 	+w1300
 		max-width: 280px
 	+w1800
@@ -209,5 +220,3 @@
 			bottom: -100%
 
 
-	.btn
-		// display: none

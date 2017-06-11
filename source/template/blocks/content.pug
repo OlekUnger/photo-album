@@ -1,30 +1,34 @@
 main.main
 
-	section
-		.container
-			.content_wrap
+  section
+    .container
+      .content_wrap
 
-				h2.main_title 
-					| #{main_title[0]}
-				.main_content
+        h2.main_title 
+          | #{main_title[0]}
+        .main_content
 
-					if title=='main'
-						include content/main-content
+          if title=='main'
+            include content/main-content
 
-					if title=='Album'
-						include content/album-content
+          if title=='Album'
+            include content/album-content
 
-					if title=='Search'
-						include content/user-content
+          if title=='Search'
+            include content/user-content
 
-					if title=='User'
-						include content/user-content
+          if title=='User'
+            include content/user-content
 
-	if title=='main'
-		section
-			.container
-				.content_wrap
-					h2.main_title 
-						| #{main_title[1]}
-					.main_content
-						include content/user-content
+      if title =='main'
+        +button('btn btn--bordered show-more_btn','Показать еще','')
+
+  if title=='main'
+    section
+      .container
+        .content_wrap
+          h2.main_title 
+            | #{main_title[1]}
+          .main_content
+            include content/user-content
+        +button('btn btn--bordered show-more_btn','Показать еще','')

@@ -7,33 +7,31 @@
   }
 }
 
-
 @mixin pseudo {
-        content: "";
-        position: absolute;
+  content: "";
+  position: absolute;
 }
 
 @mixin size($value) {
-    $width: nth($value, 1);
-    $height: $width;
+  $width: nth($value, 1);
+  $height: $width;
 
-    @if length($value) > 1 {
-        $height: nth($value, 2);
-    }
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
 
-    @if is-size($height) {
-        height: $height;
-    } @else {
-        @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
-    }
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
 
-    @if is-size($width) {
-        width: $width;
-    } @else {
-        @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
-    }
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
 }
-
 
 @mixin container {
   min-width: 320px;
@@ -56,9 +54,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-
-
 
 @mixin w320 {
   @media screen and (min-width: 320px) {
@@ -98,6 +93,12 @@
 
 @mixin w1800 {
   @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin maxw768 {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }

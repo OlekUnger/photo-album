@@ -1,0 +1,22 @@
+form.popup--edit-photo.hide
+  .popup_header.container
+    h3 Редактировать фотографию
+    +button('btn close-btn', 'Закрыть','assets/img/sprite.svg#close')
+  .container
+    .popup_content
+
+      .popup_item
+        label Название
+        +input('input','text','photo_name','photo_name','Название фотографии','','')
+    
+      .popup_item 
+        label Описание
+        +input('textarea','text','photo_text','photo_text','Описание фотографии','','')
+        
+    span.error
+    span.success
+      
+  .popup_footer.container.clearfix
+    +button('btn btn--colored save-btn','Сохранить', '')
+    +button('btn btn--transparent reset-btn','Отменить', '')
+    +button('btn btn--delete delete-btn','Удалить','assets/img/sprite.svg#delete')

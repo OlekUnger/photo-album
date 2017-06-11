@@ -13,7 +13,8 @@ auth = (function(){
 
   _showEnterForm = function(e){
     e.preventDefault();
-    
+    $('span.success').hide();
+    $('span.error').hide();
     if($('.get-resetPassword').hasClass('hide')){
       $('.get-register, .get-login').toggleClass('hide');
    
@@ -28,16 +29,18 @@ auth = (function(){
 
   _showRegisterForm = function(e){
     e.preventDefault();
+    $('span.success').hide();
+    $('span.error').hide();
     $('.get-resetPassword, .get-login').toggleClass('hide');
   };
 
   _validate = function(e){
     e.preventDefault();
-    var form = $('.auth-form:visible'),
-        input = form.find('input');
-        errors =[];
-    
-    
+    var form = $('.authWrapper:visible'),
+        input = form.find('input'),
+        errors =[],
+        success;
+     
     input.each(function(){
       var placeholder = $(this).attr('placeholder');
 
@@ -48,9 +51,10 @@ auth = (function(){
     });
 
     if(errors!=false){
-      $('span.error').show().text('Заполните: '+errors[0]);
+      $('span.error').show().text('Заполните: '+ errors[0]);
     } else { 
       $('span.error').hide();
+      
       $('span.success').show().text('Успешно');
 
       setTimeout(function(){

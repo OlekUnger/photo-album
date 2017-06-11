@@ -9,30 +9,30 @@
 
     .form_content
       .form_item
-        +input('input','text','user-name','user-name','Имя Фамилия','','')
+        +input('input','text','album_name','album_name','Заголовок альбома','','')
       .form_item
 
         if title=='main'
           +input('textarea','text','user_text','user_text','О себе','','')
 
         if title=='Album'
-          +input('textarea','text','album_text','album_text','описание альбома','','')
+          +input('textarea','text','album_text','album_text','Описание альбома','','')
 
       if title == 'main'   
         .socials
           ul(class="socials_list")
-            +icon("socials","vk", "a", "assets/img/sprite.svg#soc_vk")
-            +icon("socials","facebook", "b", "assets/img/sprite.svg#soc_fb")
-            +icon("socials","twitter", "c", "assets/img/sprite.svg#soc_twitter")
-            +icon("socials","google", "d", "assets/img/sprite.svg#social_google")
-            +icon("socials","email", "e", "assets/img/sprite.svg#soc_email")
+            +icon("socials","vk", "vkontakte", "assets/img/sprite.svg#soc_vk")
+            +icon("socials","facebook", "facebook", "assets/img/sprite.svg#soc_fb")
+            +icon("socials","twitter", "twitter", "assets/img/sprite.svg#soc_twitter")
+            +icon("socials","google", "google", "assets/img/sprite.svg#social_google")
+            +icon("socials","email", "email", "assets/img/sprite.svg#soc_email")
 
-        .popup--edit-socials.popup
-          .form_item
-            +input('input','text','','','ссылка','','')
-          .form_footer
-            +button('btn btn--bordered save-btn','Сохранить','')
-            +button('btn btn--transparent reset-btn','Отменить', '')
+          .popup--edit-socials.popup
+            .form_item
+              +input('input','text','','','ссылка','','')
+            .form_footer
+              +button('btn btn--bordered save-btn','Сохранить','')
+              +button('btn btn--transparent reset-btn','Отменить', '')
             
 
     

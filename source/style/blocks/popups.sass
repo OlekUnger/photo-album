@@ -7,47 +7,76 @@
   +w768
     width: 600px
     
-  .form_content
-    padding-top: 10px
     
   input,textarea
+    max-width: 450px
     border-radius: 20px
     padding: 10px 10px 10px 20px
     border: 1px solid $light-gray
     &:focus
       border: 1px solid $blue
+  label
+    margin-right: 20px
+  
+  .delete-btn
+    float: right
 
-  .popup
-    &_header
-      justify-content: space-between
-
+  .save-btn,
+  .reset-btn
+    float: left
+    
   .close-btn
     font-size: 0
     +size(21px)
     &:hover
       .btn_icon
         fill: $gray
+  .add-btn
+    display: inline-block
+
+  .italic
+    width: 250px
+    display: none
+    +w768
+      display: block
 
 .popup
   &_item
     width: 100%
+    // max-width: 500px
     text-align: left
     margin-bottom: 10px
+    display: flex
+    flex-direction: column
+    +w768
+      align-items: center
+      flex-direction: row
+      justify-content: flex-end
 
   &_content
     width: 100%
-    padding: 15px 0 
+    position: relative
+    padding: 15px 0
     background-color: #FFF
     display: flex
     flex-direction: column
     align-items: center
+    +w768
+      align-items: flex-end
 
-  &_header,
+
   &_footer
+    +size(100% 70px)
+    background-color: $much-light
+    padding-top: 15px
+
+  &_header
     +size(100% 70px)
     background-color: $much-light
     display: flex
     align-items: center
+    justify-content: space-between
+      
   
 
 // notice-----------------
@@ -80,8 +109,16 @@
 
 
 // add-album------------------
-.popup--add-album
+.popup--add-album,
+.popup--edit-album,
+.popup--edit-photo,
+.popup--add-photo
   position: fixed
   top: 50px
   left: 50%
+  .popup
+    &_content:last-child
 
+      +w768
+        flex-direction: row
+        justify-content: flex-end

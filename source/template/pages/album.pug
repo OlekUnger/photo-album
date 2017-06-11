@@ -1,18 +1,21 @@
 extends ../_template
 
 block title
-	title Альбом
+  title Альбом
 
 block variables
-	- var title ='Album'
-	- var main_title =''
-	
+  - var title ='Album'
+  - var main_title =''
+  
 
 block content
-	.wrapper
-		include ../blocks/header
-		include ../blocks/content
-		include ../blocks/footer
+  .wrapper
+    include ../blocks/header
+    include ../blocks/content
+    include ../blocks/footer
 
-		.overlay.popup.hide
-			include ../blocks/popups/edit-header
+    .overlay.popup.hide
+      include ../blocks/popups/edit-header
+    .overlay--dark.hide.popup
+      include ../blocks/popups/edit-photo
+      include ../blocks/popups/add-photo

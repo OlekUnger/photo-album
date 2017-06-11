@@ -3,10 +3,12 @@ editHeader =(function(){
         socialItem = $('.editHeader-form').find('.socials_item'),
         popup_socials = $('.popup--edit-socials'),
         edit_header = $('.editHeader-form'),
+        title=$('title'),
 
-        edit_btn=$('.edit-btn'),
+        edit_header_btn=$('.edit-header_btn'),
+        edit_popup_btn=$('.edit-popup_btn'),
         close_btn=$('.close-btn'),
-        add_btn=$('.add-btn'),
+        add_popup_btn=$('.add-btn'),
         reset_btn=$('.reset-btn');
    
     var init = function(){
@@ -15,11 +17,12 @@ editHeader =(function(){
 
     var _setUpListners = function(){
 
-        edit_btn.on('click', _editHeader);
+        edit_header_btn.on('click', _editHeader);
+        edit_popup_btn.on('click', _editPopup);
         socialLink.on('click', _editSocial);
         close_btn.on('click', _togglePopup);
         reset_btn.on('click', _togglePopup);
-        add_btn.on('click', _addAlbum);
+        add_popup_btn.on('click', _addPopup);
 
     };
 
@@ -46,8 +49,13 @@ editHeader =(function(){
 
     };
 
-    _addAlbum = function(){
-        $('.overlay--dark').removeClass('hide');   
+    _addPopup = function(){
+        $('.overlay--dark, [class*=popup--add-]').removeClass('hide');   
+    };
+
+    _editPopup = function(){
+
+        $('.overlay--dark, [class*=popup--edit-]').removeClass('hide');   
     }
 
 

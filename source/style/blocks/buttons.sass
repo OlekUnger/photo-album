@@ -21,7 +21,7 @@ svg[class*=_icon]
   font-weight: 500
   cursor: pointer
   letter-spacing: .7px
- 
+  // height: 40px
   &_icon
     position: absolute
     fill: $light-gray
@@ -41,7 +41,7 @@ svg[class*=_icon]
 
 .btn--bordered
   color: $blue
-  background-color: #fff
+  background-color: transparent
   border: 1px solid $blue
   &:hover
     background-color: $blue
@@ -51,7 +51,7 @@ svg[class*=_icon]
   color: $blue
   font-size: 16px
   &:hover
-    color: $blue-hover
+    text-decoration: underline
 
 
 .btn--colored
@@ -96,6 +96,15 @@ svg[class*=_icon]
     fill: #fff
     top: 9px
     left: 20px
+
+.btn--delete
+  +maxw768
+    font-size: 0
+    +size(40px)
+    padding: 0
+    .btn_icon
+      top: 9px
+      left: 9px
 
 .btn--like
   font-size: 16px

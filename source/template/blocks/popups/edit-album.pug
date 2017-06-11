@@ -1,11 +1,10 @@
-form.popup--add-album.hide
+form.popup--edit-album.hide
   .popup_header.container
-    h3 Добавить альбом
+    h3 Редактировать альбом
     +button('btn close-btn', 'Закрыть','assets/img/sprite.svg#close')
   .container
     .popup_content
 
-      
       .popup_item
         label Название
         +input('input','text','album_name','album_name','Название альбома','','')
@@ -17,8 +16,8 @@ form.popup--add-album.hide
       
     span.error
     span.success
+
     .popup_content
-      
       .italic 
         i (файл должен быть размером не более 1024КБ) 
       +button('btn btn--bordered add-btn','Загрузить обложку','')

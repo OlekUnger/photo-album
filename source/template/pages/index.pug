@@ -1,28 +1,24 @@
 extends ../_template
 
 block title
-  title Регистрация
+  title Главная страница
 
 block variables
-  - var title ='Регистрация'
-
-
+  - var title = 'main'
+  - var main_title = ['Новое в мире','Мои альбомы']
+ 
 
 block content
-
-  .wrapper.index-bg
-
-    .container
-    
-      //- форма регистрации
-      include ../blocks/auth/register
-       
-      //- форма входа
-      include ../blocks/auth/login
-
-      //- форма восстановления пароля
-      include ../blocks/auth/resetPassword
-
+  .wrapper
+    include ../blocks/header
+    include ../blocks/content
     include ../blocks/footer
 
+    .overlay.popup.hide
+      include ../blocks/popups/edit-header
       
+    .overlay--dark.hide.popup
+      include ../blocks/popups/add-album
+      include ../blocks/popups/edit-album
+      //- include ../blocks/popups/edit-profile
+

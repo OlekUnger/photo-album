@@ -1,5 +1,5 @@
 +button('btn btn--slidered add-btn','Добавить','assets/img/sprite.svg#add')
-- for(var i=0; i<6; i++)
+- for(var i=0; i<4; i++)
   article.item.item--photo
     .item_photo
       +link('item_overlay','','#','assets/img/sprite.svg#loupe')
@@ -14,5 +14,5 @@
       img(src="assets/img/album-pic-1.jpg")
     .item_footer
       .edit-btn
-        +button('btn','Редактировать','assets/img/sprite.svg#edit')
+        +button('btn edit-popup_btn','Редактировать','assets/img/sprite.svg#edit')
       span.photo_title Заголовок фотографии
